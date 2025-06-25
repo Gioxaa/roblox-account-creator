@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { delay } from '../utils/helpers.js';
 import { extractRobloxCaptchaData } from './captchaExtractor.js';
-import { extractDataExchangeBlob } from './captchaBase.js';
+import { extractDataExchangeBlob, extractRobloxDataExchangeBlob, monitorForRobloxArkoseIframe } from './captchaBase.js';
 
 /**
  * Inject FunCaptcha token into the page
@@ -18,14 +18,54 @@ export async function injectFunCaptchaToken(page, token, logger) {
     // First try the Roblox-specific ArkoseLabs token injection
     const arkoseResult = await page.evaluate((token) => {
       try {
-        // Method 1: Direct token injection to ArkoseLabs
+        // Method 1: Try Roblox specific captcha token handling
+        if (window.Roblox && window.Roblox.FunCaptcha) {
+          console.log("Found Roblox.FunCaptcha object, attempting to use it");
+          
+          // First check if there's a specific method for setting the token
+          if (typeof window.Roblox.FunCaptcha.setToken === 'function') {
+            window.Roblox.FunCaptcha.setToken(token);
+            console.log("Set token via Roblox.FunCaptcha.setToken");
+            return "Set token via Roblox.FunCaptcha.setToken";
+          }
+          
+          // Check for any other token-setting methods
+          const possibleMethods = [
+            'setTokenResponse', 
+            'setFunCaptchaToken', 
+            'submitToken', 
+            'onCaptchaSuccess'
+          ];
+          
+          for (const methodName of possibleMethods) {
+            if (typeof window.Roblox.FunCaptcha[methodName] === 'function') {
+              console.log(`Found method Roblox.FunCaptcha.${methodName}, calling it`);
+              window.Roblox.FunCaptcha[methodName](token);
+              return `Set token via Roblox.FunCaptcha.${methodName}`;
+            }
+          }
+          
+          // Try to set the token in the Roblox FunCaptcha object
+          window.Roblox.FunCaptcha.token = token;
+          console.log("Set token via Roblox.FunCaptcha.token property");
+          
+          // Also try to trigger any onSuccess callbacks
+          if (typeof window.Roblox.FunCaptcha.onSuccess === 'function') {
+            window.Roblox.FunCaptcha.onSuccess(token);
+            console.log("Called Roblox.FunCaptcha.onSuccess");
+          }
+          
+          return "Set token via Roblox.FunCaptcha.token property";
+        }
+        
+        // Method 2: Direct token injection to ArkoseLabs
         if (window.arkose && window.arkose.setTokenResponse) {
           console.log("Found arkose object, setting token directly");
           window.arkose.setTokenResponse(token);
           return "Set token via arkose.setTokenResponse";
         }
         
-        // Method 2: Find the funcaptcha iframe and send message
+        // Method 3: Find the funcaptcha iframe and send message
         const funcaptchaIframe = document.querySelector('iframe[src*="arkoselabs"]');
         if (funcaptchaIframe) {
           console.log("Found funcaptcha iframe, sending postMessage");
@@ -33,7 +73,7 @@ export async function injectFunCaptchaToken(page, token, logger) {
           return "Set token via iframe postMessage";
         }
         
-        // Method 3: Try to find the fc-token input field
+        // Method 4: Try to find the fc-token input field
         const fcTokenInput = document.querySelector('input[name="fc-token"]');
         if (fcTokenInput) {
           console.log("Found fc-token input, setting value");
@@ -45,7 +85,7 @@ export async function injectFunCaptchaToken(page, token, logger) {
           return "Set token via fc-token input";
         }
         
-        // Method 4: Try to find the FunCaptcha-Token input field
+        // Method 5: Try to find the FunCaptcha-Token input field
         const funcaptchaTokenInput = document.querySelector('input[name="FunCaptcha-Token"]');
         if (funcaptchaTokenInput) {
           console.log("Found FunCaptcha-Token input, setting value");
@@ -57,7 +97,7 @@ export async function injectFunCaptchaToken(page, token, logger) {
           return "Set token via FunCaptcha-Token input";
         }
         
-        // Method 5: Try to find any input with name containing captcha
+        // Method 6: Try to find any input with name containing captcha
         const captchaInput = document.querySelector('input[name*="captcha" i]');
         if (captchaInput) {
           console.log("Found captcha input, setting value");
@@ -69,18 +109,7 @@ export async function injectFunCaptchaToken(page, token, logger) {
           return "Set token via captcha input";
         }
         
-        // Method 6: Create a global variable for the token that can be accessed
-        window.funcaptchaToken = token;
-        console.log("Created global funcaptchaToken variable");
-        
-        // Method 7: Try to find and trigger the verification callback
-        if (window.verifyCallback) {
-          console.log("Found verifyCallback, calling it");
-          window.verifyCallback(token);
-          return "Called verifyCallback with token";
-        }
-        
-        // Method 8: For Roblox specifically, try to find the captcha token field
+        // Method 7: For Roblox specifically, try to find the captcha token field
         const robloxCaptchaTokenField = document.querySelector('#captcha-token');
         if (robloxCaptchaTokenField) {
           console.log("Found Roblox captcha-token field, setting value");
@@ -92,7 +121,69 @@ export async function injectFunCaptchaToken(page, token, logger) {
           return "Set token via Roblox captcha-token field";
         }
         
-        return "No suitable injection method found";
+        // Method 8: Create a global variable for the token that can be accessed
+        window.funcaptchaToken = token;
+        console.log("Created global funcaptchaToken variable");
+        
+        // Method 9: Try to find and trigger the verification callback
+        if (window.verifyCallback) {
+          console.log("Found verifyCallback, calling it");
+          window.verifyCallback(token);
+          return "Called verifyCallback with token";
+        }
+        
+        // Method 10: Roblox specific - try to find the arkose frame and set the token
+        const arkoseFrame = document.getElementById('arkose-iframe');
+        if (arkoseFrame) {
+          console.log("Found arkose-iframe, trying to access contentWindow");
+          try {
+            arkoseFrame.contentWindow.postMessage({ token: token }, '*');
+            console.log("Posted message to arkose-iframe contentWindow");
+            return "Posted message to arkose-iframe contentWindow";
+          } catch (e) {
+            console.error("Error posting message to arkose-iframe:", e);
+          }
+        }
+        
+        // Method 11: Try to find any verification callbacks in the global scope
+        for (const key in window) {
+          if (typeof window[key] === 'function' && 
+              (key.toLowerCase().includes('captcha') || 
+               key.toLowerCase().includes('verify') || 
+               key.toLowerCase().includes('token'))) {
+            try {
+              console.log(`Found potential callback function: ${key}`);
+              window[key](token);
+              return `Called potential callback function: ${key}`;
+            } catch (e) {
+              console.error(`Error calling ${key}:`, e);
+            }
+          }
+        }
+        
+        // Method 12: Try to find any hidden input fields that might be related to captcha
+        const hiddenInputs = document.querySelectorAll('input[type="hidden"]');
+        for (const input of hiddenInputs) {
+          if (input.name && (
+              input.name.toLowerCase().includes('captcha') || 
+              input.name.toLowerCase().includes('token') || 
+              input.name.toLowerCase().includes('arkose')
+          )) {
+            console.log(`Found hidden input field: ${input.name}`);
+            input.value = token;
+            
+            // Dispatch change event
+            const event = new Event('change', { bubbles: true });
+            input.dispatchEvent(event);
+            return `Set token via hidden input field: ${input.name}`;
+          }
+        }
+        
+        // Method 13: Try to set the token in the document as a data attribute
+        document.documentElement.setAttribute('data-funcaptcha-token', token);
+        console.log("Set token as data-funcaptcha-token attribute on document");
+        
+        return "No suitable injection method found, but tried multiple approaches";
       } catch (error) {
         return `Error injecting token: ${error.message}`;
       }
@@ -108,19 +199,57 @@ export async function injectFunCaptchaToken(page, token, logger) {
           document.querySelector('button[type="submit"]') || 
           document.querySelector('input[type="submit"]') ||
           document.querySelector('button.signup-button') ||
-          document.querySelector('button#signup-button') ||
+          document.querySelector('#signup-button') ||
           document.querySelector('button.btn-primary') ||
           document.querySelector('button.btn-signup') ||
           document.querySelector('button[id*="signup" i]') ||
-          document.querySelector('button[class*="signup" i]');
+          document.querySelector('button[class*="signup" i]') ||
+          // Add more specific selectors for Roblox
+          document.querySelector('.captcha-solver-button') ||
+          document.querySelector('.captcha-submit') ||
+          document.querySelector('.challenge-submit');
         
         if (submitButton) {
-          console.log("Found submit button, clicking it");
+          console.log(`Found submit button: ${submitButton.textContent || submitButton.value || 'unnamed button'}`);
           submitButton.click();
           return "Clicked submit button";
         }
         
-        return "No submit button found";
+        // Look for any button that might be related to CAPTCHA submission
+        const allButtons = Array.from(document.querySelectorAll('button'));
+        for (const button of allButtons) {
+          const buttonText = button.textContent.toLowerCase();
+          if (buttonText.includes('verify') || 
+              buttonText.includes('submit') || 
+              buttonText.includes('continue') ||
+              buttonText.includes('next')) {
+            console.log(`Clicking potential CAPTCHA submit button: ${buttonText}`);
+            button.click();
+            return `Clicked button with text: ${buttonText}`;
+          }
+        }
+        
+        // Try to submit any form that might be related to captcha
+        const forms = document.querySelectorAll('form');
+        for (const form of forms) {
+          if (form.innerHTML.toLowerCase().includes('captcha') || 
+              form.action.toLowerCase().includes('captcha') ||
+              form.id.toLowerCase().includes('captcha')) {
+            console.log("Found and submitting captcha-related form");
+            form.submit();
+            return "Submitted captcha-related form";
+          }
+        }
+        
+        // If we have a signup form, try to submit it
+        const signupForm = document.querySelector('form[id*="signup" i], form[action*="signup" i]');
+        if (signupForm) {
+          console.log("Found and submitting signup form");
+          signupForm.submit();
+          return "Submitted signup form";
+        }
+        
+        return "No submit button or form found";
       } catch (error) {
         return `Error submitting form: ${error.message}`;
       }
@@ -128,7 +257,11 @@ export async function injectFunCaptchaToken(page, token, logger) {
     
     logger.log(`Form submission result: ${submitResult}`);
     
-    return arkoseResult.includes("Set token") || arkoseResult.includes("Called");
+    return arkoseResult.includes("Set token") || 
+           arkoseResult.includes("Called") || 
+           arkoseResult.includes("Posted") || 
+           submitResult.includes("Clicked") || 
+           submitResult.includes("Submitted");
   } catch (error) {
     logger.error(`Error injecting FunCaptcha token: ${error.message}`);
     return false;
@@ -163,10 +296,17 @@ export async function solveRobloxFunCaptcha(apiKey, siteKey, blobData = null, lo
     if (blobData) {
       formData.append('data[blob]', blobData);
       logger.log(`Using blob data for CAPTCHA solving: ${blobData.substring(0, 30)}...`);
+      
+      // Also set the specific subdomain for Roblox
+      formData.append('subdomain', 'roblox-api.arkoselabs.com');
     } else {
       formData.append('data[blob]', '');
+      logger.log("No blob data available, attempting to solve without it");
     }
+    
+    // Add user agent and other parameters that might help
     formData.append('userAgent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36');
+    formData.append('soft_id', 'puppeteer');
     
     logger.log(`Sending Roblox FunCaptcha request to 2captcha: ${formData.toString()}`);
     
@@ -213,7 +353,8 @@ export async function solveRobloxFunCaptcha(apiKey, siteKey, blobData = null, lo
     logger.log("Waiting 20 seconds before checking for results...");
     await delay(20000);
     
-    const maxAttempts = 10;
+    const maxAttempts = 15; // Increase the number of attempts
+    const checkInterval = 5000; // Check every 5 seconds
     
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       logger.log(`Checking CAPTCHA solution status (attempt ${attempt}/${maxAttempts})...`);
@@ -242,7 +383,7 @@ export async function solveRobloxFunCaptcha(apiKey, siteKey, blobData = null, lo
         }
       } catch (error) {
         logger.error(`Error parsing 2captcha result: ${error.message}`);
-        await delay(5000);
+        await delay(checkInterval);
         continue;
       }
       
@@ -254,7 +395,7 @@ export async function solveRobloxFunCaptcha(apiKey, siteKey, blobData = null, lo
       } else if (resultData.request === "CAPCHA_NOT_READY") {
         // CAPTCHA is still being solved
         logger.log("CAPTCHA still being solved, waiting...");
-        await delay(5000); // Wait 5 seconds before checking again
+        await delay(checkInterval); // Wait before checking again
         continue;
       } else {
         // Error
@@ -280,12 +421,27 @@ export async function solveRobloxSpecificFunCaptcha(page, config, logger) {
   try {
     logger.log("Starting Roblox-specific FunCaptcha solution");
     
-    // First, try to extract the dataExchangeBlob
+    // First, try to extract the dataExchangeBlob using the new Roblox-specific method
     let blobData = null;
     if (config.funcaptchaOptions && config.funcaptchaOptions.autoParseBlob) {
-      blobData = await extractDataExchangeBlob(page);
+      // Try to monitor for the iframe to appear and extract the blob
+      logger.log("Monitoring for Roblox arkose iframe to appear...");
+      blobData = await monitorForRobloxArkoseIframe(page, 5000);
+      
+      // If that fails, try the Roblox-specific method
+      if (!blobData) {
+        blobData = await extractRobloxDataExchangeBlob(page);
+      }
+      
+      // If that fails, fall back to the general method
+      if (!blobData) {
+        blobData = await extractDataExchangeBlob(page);
+      }
+      
       if (blobData) {
         logger.log(`Found dataExchangeBlob for Roblox-specific FunCaptcha solution`);
+      } else {
+        logger.log("Could not find dataExchangeBlob, will attempt to solve without it");
       }
     }
     

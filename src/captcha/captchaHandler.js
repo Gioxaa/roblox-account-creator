@@ -1,7 +1,7 @@
 import path from 'path';
 import { delay } from '../utils/helpers.js';
 import { solveCaptcha } from './captchaSolver.js';
-import { monitorCaptchaStatus } from './captchaBase.js';
+import { monitorCaptchaStatus, extractRobloxDataExchangeBlob, monitorForRobloxArkoseIframe } from './captchaBase.js';
 
 /**
  * Handle CAPTCHA detection and solving
@@ -48,7 +48,9 @@ export async function handleCaptcha(page, username, workerID, config, logger, rl
         .filter(iframe => 
           iframe.src && (
             iframe.src.includes('arkoselabs') || 
-            iframe.src.includes('funcaptcha')
+            iframe.src.includes('funcaptcha') ||
+            iframe.src.includes('arkose') ||
+            iframe.src.includes('roblox.com/arkose')
           )
         )
         .map(iframe => iframe.src);
@@ -84,6 +86,64 @@ export async function handleCaptcha(page, username, workerID, config, logger, rl
       // Wait for CAPTCHA iframe to fully load
       logger.log("Waiting for CAPTCHA iframe to fully load...");
       await delay(3000);
+      
+      // Try to monitor for the Roblox arkose iframe to appear
+      logger.log("Monitoring for Roblox arkose iframe...");
+      const blobData = await monitorForRobloxArkoseIframe(page, 5000);
+      if (blobData) {
+        logger.log("Successfully found dataExchangeBlob from Roblox arkose iframe");
+        captchaDetails.blobData = blobData;
+      }
+      
+      // Check if we need to click a "Start Puzzle" or "Solve Puzzle" button first
+      await page.evaluate(() => {
+        try {
+          // Look for buttons with text like "Start Puzzle", "Solve Puzzle", "Verify", etc.
+          const buttonTexts = ['start puzzle', 'solve puzzle', 'verify', 'start challenge', 'solve challenge'];
+          const buttons = Array.from(document.querySelectorAll('button, a, div[role="button"]'));
+          
+          for (const button of buttons) {
+            const text = button.textContent.toLowerCase().trim();
+            if (buttonTexts.some(btnText => text.includes(btnText))) {
+              console.log(`Found and clicking button: ${text}`);
+              button.click();
+              return `Clicked ${text} button`;
+            }
+          }
+          
+          // Look for elements with specific classes that might be clickable buttons
+          const buttonSelectors = [
+            '.captcha-solver',
+            '.challenge-button',
+            '.verification-button',
+            '.puzzle-button',
+            '[class*="captcha"] button',
+            '[class*="challenge"] button',
+            '[class*="verify"] button'
+          ];
+          
+          for (const selector of buttonSelectors) {
+            const element = document.querySelector(selector);
+            if (element) {
+              console.log(`Found and clicking element with selector: ${selector}`);
+              element.click();
+              return `Clicked element with selector: ${selector}`;
+            }
+          }
+          
+          return "No 'Start Puzzle' button found";
+        } catch (e) {
+          console.error("Error looking for 'Start Puzzle' button:", e);
+          return null;
+        }
+      }).then(result => {
+        if (result) logger.log(`Pre-solving action: ${result}`);
+      }).catch(e => {
+        logger.error(`Error in pre-solving action: ${e.message}`);
+      });
+      
+      // Wait for CAPTCHA to initialize after clicking the button
+      await delay(2000);
       
       // Try automatic solving if configured
       if (config.captchaSolve && config.captchaApiKey) {
@@ -152,6 +212,55 @@ export async function handleCaptcha(page, username, workerID, config, logger, rl
               logger.log("Waiting for CAPTCHA verification...");
               await delay(5000);
               
+              // Check if we need to click a submit button after solving
+              const submitResult = await page.evaluate(() => {
+                try {
+                  // Look for buttons with text like "Submit", "Verify", "Continue", etc.
+                  const buttonTexts = ['submit', 'verify', 'continue', 'done', 'complete', 'next'];
+                  const buttons = Array.from(document.querySelectorAll('button, input[type="submit"], a.btn, div[role="button"]'));
+                  
+                  for (const button of buttons) {
+                    const text = (button.textContent || button.value || '').toLowerCase().trim();
+                    if (buttonTexts.some(btnText => text.includes(btnText))) {
+                      console.log(`Found and clicking post-CAPTCHA button: ${text}`);
+                      button.click();
+                      return `Clicked ${text} button`;
+                    }
+                  }
+                  
+                  // Try common selectors for submit buttons
+                  const submitSelectors = [
+                    '.captcha-submit',
+                    '.captcha-solver-button',
+                    '.challenge-submit',
+                    '.verification-submit',
+                    '.btn-submit',
+                    '.btn-verify',
+                    '#signup-button',
+                    'button[type="submit"]'
+                  ];
+                  
+                  for (const selector of submitSelectors) {
+                    const element = document.querySelector(selector);
+                    if (element) {
+                      console.log(`Found and clicking submit element with selector: ${selector}`);
+                      element.click();
+                      return `Clicked element with selector: ${selector}`;
+                    }
+                  }
+                  
+                  return "No post-CAPTCHA submit button found";
+                } catch (e) {
+                  console.error("Error looking for post-CAPTCHA submit button:", e);
+                  return null;
+                }
+              });
+              
+              logger.log(`Post-CAPTCHA action: ${submitResult}`);
+              
+              // Wait for the site to process the submission
+              await delay(3000);
+              
               // Check if we're still on the signup page or if we've moved on
               const currentUrl = await page.url();
               if (currentUrl.includes('/home') || !currentUrl.includes('signup')) {
@@ -171,20 +280,30 @@ export async function handleCaptcha(page, username, workerID, config, logger, rl
                   '.signup-success, .success-message, [class*="success"]'
                 );
                 
+                // Check for error messages
+                const errorElements = document.querySelectorAll(
+                  '.error-message, .captcha-failed, [class*="error"]'
+                );
+                
                 return {
                   captchaPresent: captchaElements.length > 0,
-                  successFound: successElements.length > 0
+                  successFound: successElements.length > 0,
+                  errorFound: errorElements.length > 0,
+                  errorMessages: Array.from(errorElements).map(el => el.textContent).join(', ')
                 };
               });
               
-              if (!captchaStillPresent.captchaPresent || captchaStillPresent.successFound) {
+              if (captchaStillPresent.errorFound) {
+                logger.error(`CAPTCHA verification failed with error: ${captchaStillPresent.errorMessages}`);
+                solved = false;
+              } else if (!captchaStillPresent.captchaPresent || captchaStillPresent.successFound) {
                 logger.log("CAPTCHA verification successful - CAPTCHA elements no longer visible");
                 return true;
+              } else {
+                // If we're still here, the CAPTCHA might not have been properly verified
+                logger.log("CAPTCHA may not have been properly verified, trying again...");
+                solved = false;
               }
-              
-              // If we're still here, the CAPTCHA might not have been properly verified
-              logger.log("CAPTCHA may not have been properly verified, trying again...");
-              solved = false;
             }
           } catch (solveError) {
             logger.error(`CAPTCHA solving error on attempt ${attempts}: ${solveError.message}`);

@@ -174,3 +174,13 @@
 [2025-06-25T20:13:20.639Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
 [2025-06-25T20:13:41.167Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
 [2025-06-25T20:13:41.167Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:21:50.499Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:21:50.499Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:25:18.408Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:25:18.408Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:29:43.161Z] ERROR: Worker 0: Failed to create account ElentinalPormjf651: Waiting failed: 10000ms exceeded
+[2025-06-25T20:30:05.678Z] ERROR: Worker 0: Failed to create account ElentinalPormjf651: Waiting failed: 10000ms exceeded
+[2025-06-25T20:31:00.633Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:31:00.633Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:35:57.839Z] ERROR: Roblox FunCaptcha solution error: Failed to get CAPTCHA solution after maximum attempts
+[2025-06-25T20:35:57.839Z] ERROR: Roblox-specific FunCaptcha solution error: Failed to get CAPTCHA solution after maximum attempts
