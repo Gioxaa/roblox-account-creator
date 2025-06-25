@@ -576,6 +576,17 @@ async function solveCaptcha(page, siteUrl, siteKey) {
   try {
     logger.log(`Attempting to solve CAPTCHA automatically with ${config.captchaService} API`);
     
+    // Check if this is a Roblox page
+    const isRobloxPage = siteUrl.includes('roblox.com') || await page.evaluate(() => {
+      return window.location.href.includes('roblox.com');
+    });
+    
+    // If this is a Roblox page, use our dedicated Roblox FunCaptcha solver
+    if (isRobloxPage) {
+      logger.log("Detected Roblox page, using Roblox-specific FunCaptcha solver");
+      return await solveRobloxSpecificFunCaptcha(page);
+    }
+    
     // First check if we can extract the key from network resources
     const networkDetails = await extractCaptchaDetailsFromNetwork(page);
     
@@ -824,8 +835,8 @@ async function solve2Captcha(siteUrl, siteKey, subdomain, userAgent, dataString,
     logger.log("Waiting for 2captcha to solve the CAPTCHA...");
     
     // Wait initial recommended time before first check
-    logger.log("Waiting 20 seconds before checking for results...");
-    await delay(20000);
+    logger.log("Waiting 5 seconds before checking for results...");
+    await delay(5000);
     
     // Use a more robust polling approach
     const maxAttempts = config.captchaMaxAttempts || 40;
@@ -1308,187 +1319,111 @@ async function injectFunCaptchaToken(page, token) {
         }
         
         // Method 2: Find the funcaptcha iframe and send message
-        const funcaptchaIframe = document.querySelector('iframe[src*="arkoselabs"], iframe[src*="funcaptcha"]');
+        const funcaptchaIframe = document.querySelector('iframe[src*="arkoselabs"]');
         if (funcaptchaIframe) {
-          console.log("Found FunCaptcha iframe, sending postMessage");
-          try {
-            // Send the token via postMessage to the iframe
-            funcaptchaIframe.contentWindow.postMessage(
-              JSON.stringify({
-                message: "token", 
-                token: token
-              }), 
-              "*"
-            );
-            return "Sent token via postMessage to FunCaptcha iframe";
-          } catch (e) {
-            console.error("Error sending message to iframe:", e);
-          }
+          console.log("Found funcaptcha iframe, sending postMessage");
+          funcaptchaIframe.contentWindow.postMessage({ token }, '*');
+          return "Set token via iframe postMessage";
         }
         
-        // Method 3: Find any token field in the page
-        const tokenFields = document.querySelectorAll('input[name="fc-token"], input[name="arkose-token"], input[name="funcaptcha-token"], input[name="captcha-token"], input[name="verification-token"]');
-        if (tokenFields.length > 0) {
-          for (const field of tokenFields) {
-            field.value = token;
-          }
-          return `Set token in ${tokenFields.length} input fields`;
+        // Method 3: Try to find the fc-token input field
+        const fcTokenInput = document.querySelector('input[name="fc-token"]');
+        if (fcTokenInput) {
+          console.log("Found fc-token input, setting value");
+          fcTokenInput.value = token;
+          
+          // Dispatch change event
+          const event = new Event('change', { bubbles: true });
+          fcTokenInput.dispatchEvent(event);
+          return "Set token via fc-token input";
         }
         
-        // Method 4: Create a hidden input field with the token
-        const form = document.querySelector('form');
-        if (form) {
-          console.log("Found form, creating hidden input for token");
-          const hiddenInput = document.createElement('input');
-          hiddenInput.type = 'hidden';
-          hiddenInput.name = 'fc-token';
-          hiddenInput.value = token;
-          form.appendChild(hiddenInput);
-          return "Created hidden input with token in form";
+        // Method 4: Try to find the FunCaptcha-Token input field
+        const funcaptchaTokenInput = document.querySelector('input[name="FunCaptcha-Token"]');
+        if (funcaptchaTokenInput) {
+          console.log("Found FunCaptcha-Token input, setting value");
+          funcaptchaTokenInput.value = token;
+          
+          // Dispatch change event
+          const event = new Event('change', { bubbles: true });
+          funcaptchaTokenInput.dispatchEvent(event);
+          return "Set token via FunCaptcha-Token input";
         }
         
-        return null;
-      } catch (e) {
-        console.error("Error in ArkoseLabs token injection:", e);
-        return "Error: " + e.message;
+        // Method 5: Try to find any input with name containing captcha
+        const captchaInput = document.querySelector('input[name*="captcha" i]');
+        if (captchaInput) {
+          console.log("Found captcha input, setting value");
+          captchaInput.value = token;
+          
+          // Dispatch change event
+          const event = new Event('change', { bubbles: true });
+          captchaInput.dispatchEvent(event);
+          return "Set token via captcha input";
+        }
+        
+        // Method 6: Create a global variable for the token that can be accessed
+        window.funcaptchaToken = token;
+        console.log("Created global funcaptchaToken variable");
+        
+        // Method 7: Try to find and trigger the verification callback
+        if (window.verifyCallback) {
+          console.log("Found verifyCallback, calling it");
+          window.verifyCallback(token);
+          return "Called verifyCallback with token";
+        }
+        
+        // Method 8: For Roblox specifically, try to find the captcha token field
+        const robloxCaptchaTokenField = document.querySelector('#captcha-token');
+        if (robloxCaptchaTokenField) {
+          console.log("Found Roblox captcha-token field, setting value");
+          robloxCaptchaTokenField.value = token;
+          
+          // Dispatch change event
+          const event = new Event('change', { bubbles: true });
+          robloxCaptchaTokenField.dispatchEvent(event);
+          return "Set token via Roblox captcha-token field";
+        }
+        
+        return "No suitable injection method found";
+      } catch (error) {
+        return `Error injecting token: ${error.message}`;
       }
     }, token);
     
-    if (arkoseResult) {
-      logger.log(`ArkoseLabs token injection: ${arkoseResult}`);
-    }
+    logger.log(`Arkose token injection result: ${arkoseResult}`);
     
-    // Wait a moment for the token to be processed
-    await delay(2000);
-    
-    // Try Roblox-specific methods
-    const robloxResult = await page.evaluate((token) => {
-      try {
-        // Method 1: Set token via Roblox.FunCaptcha
-        if (window.Roblox && window.Roblox.FunCaptcha) {
-          console.log("Found Roblox.FunCaptcha, attempting to set token");
-          
-          // Method 1a: Using setToken function
-          if (typeof window.Roblox.FunCaptcha.setToken === 'function') {
-            window.Roblox.FunCaptcha.setToken(token);
-            console.log("Set token via Roblox.FunCaptcha.setToken");
-            return "Roblox.FunCaptcha.setToken";
-          }
-          
-          // Method 1b: Using setResponse function
-          if (typeof window.Roblox.FunCaptcha.setResponse === 'function') {
-            window.Roblox.FunCaptcha.setResponse(token);
-            console.log("Set token via Roblox.FunCaptcha.setResponse");
-            return "Roblox.FunCaptcha.setResponse";
-          }
-          
-          // Method 1c: Store directly in object
-          window.Roblox.FunCaptcha.token = token;
-          window.Roblox.FunCaptcha.TOKEN = token;
-          window.Roblox.FunCaptcha._token = token;
-          console.log("Stored token in Roblox.FunCaptcha properties");
-          return "Stored token in Roblox.FunCaptcha properties";
-        }
-        
-        return null;
-      } catch (e) {
-        console.error("Error in Roblox-specific token injection:", e);
-        return null;
-      }
-    }, token);
-    
-    if (robloxResult) {
-      logger.log(`Roblox-specific token injection: ${robloxResult}`);
-    }
-    
-    // Try to submit the form or click relevant buttons
+    // Now try to submit the form if there's a submit button
     const submitResult = await page.evaluate(() => {
       try {
-        // Method 1: Find and click submit buttons
-        const submitButtons = document.querySelectorAll('button[type="submit"], input[type="submit"], button.signup-button, #signup-button');
-        for (const button of submitButtons) {
-          if (!button.disabled) {
-            console.log("Clicking submit button after token injection");
-            button.click();
-            return "Clicked submit button";
-          }
+        // Find submit button by various selectors
+        const submitButton = 
+          document.querySelector('button[type="submit"]') || 
+          document.querySelector('input[type="submit"]') ||
+          document.querySelector('button.signup-button') ||
+          document.querySelector('button#signup-button') ||
+          document.querySelector('button.btn-primary') ||
+          document.querySelector('button.btn-signup') ||
+          document.querySelector('button[id*="signup" i]') ||
+          document.querySelector('button[class*="signup" i]');
+        
+        if (submitButton) {
+          console.log("Found submit button, clicking it");
+          submitButton.click();
+          return "Clicked submit button";
         }
         
-        // Method 2: Submit the form directly
-        const forms = document.querySelectorAll('form');
-        for (const form of forms) {
-          console.log("Submitting form directly");
-          form.submit();
-          return "Submitted form directly";
-        }
-        
-        // Method 3: Try to find any button that looks like it would submit the form
-        const allButtons = document.querySelectorAll('button');
-        for (const button of allButtons) {
-          const text = button.textContent.toLowerCase();
-          if (text.includes('sign up') || text.includes('submit') || text.includes('continue') || text.includes('next')) {
-            console.log(`Clicking button with text: ${button.textContent}`);
-            button.click();
-            return `Clicked button with text: ${button.textContent}`;
-          }
-        }
-        
-        return "No submit button or form found";
-      } catch (e) {
-        console.error("Error during form submission:", e);
-        return "Error: " + e.message;
+        return "No submit button found";
+      } catch (error) {
+        return `Error submitting form: ${error.message}`;
       }
     });
     
     logger.log(`Form submission result: ${submitResult}`);
     
-    // Wait to ensure the token is processed
-    await delay(3000);
-    
-    // Verify if the token was accepted
-    const verificationResult = await page.evaluate(() => {
-      // Check if we're redirected or if there's a success message
-      if (window.location.href.includes('/home') || !window.location.href.includes('signup')) {
-        return "Success: Redirected after token submission";
-      }
-      
-      // Check if CAPTCHA elements are still visible
-      const captchaElements = document.querySelectorAll(
-        'iframe[src*="arkoselabs"], iframe[src*="funcaptcha"], [class*="captcha"], [id*="captcha"]'
-      );
-      
-      if (captchaElements.length === 0) {
-        return "Success: CAPTCHA elements no longer visible";
-      }
-      
-      // Check for success messages
-      const successElements = document.querySelectorAll(
-        '.signup-success, .success-message, [class*="success"]'
-      );
-      
-      if (successElements.length > 0) {
-        return "Success: Found success message elements";
-      }
-      
-      return "Verification inconclusive";
-    });
-    
-    logger.log(`Token verification result: ${verificationResult}`);
-    
-    // Take screenshot after token injection
-    if (config.verboseLog) {
-      try {
-        const screenshotPath = path.join(LOGS_DIR, `post_token_${Date.now()}.png`);
-        await page.screenshot({ path: screenshotPath });
-        logger.log(`Saved post-token screenshot to ${screenshotPath}`);
-      } catch (e) {
-        logger.error(`Failed to save post-token screenshot: ${e.message}`);
-      }
-    }
-    
-    return verificationResult.includes("Success");
+    return arkoseResult.includes("Set token") || arkoseResult.includes("Called");
   } catch (error) {
-    logger.error(`Error injecting token: ${error.message}`);
+    logger.error(`Error injecting FunCaptcha token: ${error.message}`);
     return false;
   }
 }
@@ -2647,3 +2582,214 @@ main().catch(error => {
   logger.error(`Application error: ${error.message}`);
   process.exit(1);
 });
+
+// Dedicated function to solve Roblox's FunCaptcha
+async function solveRobloxSpecificFunCaptcha(page) {
+  try {
+    logger.log("Starting Roblox-specific FunCaptcha solution");
+    
+    // Extract the CAPTCHA details from the page
+    const captchaDetails = await page.evaluate(() => {
+      try {
+        // Method 1: Try to get data from ArkoseLabs iframe
+        const arkoseFrame = document.querySelector('iframe[src*="arkoselabs"]');
+        if (arkoseFrame) {
+          const src = arkoseFrame.src;
+          const url = new URL(src);
+          
+          // Extract public key from iframe URL
+          let publicKey = null;
+          if (url.hash) {
+            const hashParts = url.hash.substring(1).split('&');
+            if (hashParts.length > 0) {
+              publicKey = hashParts[0];
+            }
+          }
+          
+          // Extract subdomain
+          const subdomain = url.hostname;
+          
+          return {
+            publicKey,
+            subdomain,
+            found: "iframe"
+          };
+        }
+        
+        // Method 2: Try to get data from data attributes
+        const captchaDiv = document.querySelector('div[data-sitekey]') || 
+                          document.querySelector('div[data-pkey]');
+        
+        if (captchaDiv) {
+          const publicKey = captchaDiv.getAttribute('data-sitekey') || 
+                           captchaDiv.getAttribute('data-pkey');
+          
+          return {
+            publicKey,
+            found: "div"
+          };
+        }
+        
+        // Method 3: Try to find the key in the DOM
+        const scripts = document.querySelectorAll('script');
+        for (const script of scripts) {
+          const content = script.textContent || '';
+          
+          // Look for patterns like "public_key": "XXXXXXX" or sitekey: "XXXXXXX"
+          const keyMatch = content.match(/["']public[_]?key["']\s*:\s*["']([A-Z0-9\-]+)["']/) || 
+                          content.match(/["']sitekey["']\s*:\s*["']([A-Z0-9\-]+)["']/);
+          
+          if (keyMatch && keyMatch[1]) {
+            return {
+              publicKey: keyMatch[1],
+              found: "script"
+            };
+          }
+        }
+        
+        // Method 4: Try to find the key in network requests
+        const fcTokenInput = document.querySelector('input[name="fc-token"]');
+        if (fcTokenInput) {
+          const value = fcTokenInput.value;
+          if (value) {
+            const pkMatch = value.match(/pk=([A-Z0-9\-]+)/);
+            if (pkMatch && pkMatch[1]) {
+              return {
+                publicKey: pkMatch[1],
+                found: "fc-token"
+              };
+            }
+          }
+        }
+        
+        // Method 5: Use a hardcoded key for Roblox
+        return {
+          publicKey: "A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F",
+          subdomain: "roblox-api.arkoselabs.com",
+          found: "hardcoded"
+        };
+      } catch (error) {
+        console.error("Error extracting CAPTCHA details:", error);
+        return {
+          publicKey: "A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F",
+          subdomain: "roblox-api.arkoselabs.com",
+          found: "hardcoded-fallback"
+        };
+      }
+    });
+    
+    logger.log(`Found CAPTCHA details: ${JSON.stringify(captchaDetails)}`);
+    
+    // Get the API key
+    const apiKey = config.captchaServices['2captcha'].apiKey || config.captchaApiKey;
+    if (!apiKey) {
+      logger.error("No 2captcha API key found");
+      return false;
+    }
+    
+    // Get the user agent
+    const userAgent = await page.evaluate(() => navigator.userAgent);
+    
+    // Prepare the request to 2captcha
+    const formData = new URLSearchParams();
+    formData.append('key', apiKey);
+    formData.append('method', 'funcaptcha');
+    formData.append('publickey', captchaDetails.publicKey);
+    formData.append('surl', 'https://roblox-api.arkoselabs.com');
+    formData.append('pageurl', 'https://www.roblox.com/');
+    formData.append('data[blob]', '');
+    formData.append('userAgent', userAgent);
+    formData.append('json', '1');
+    
+    logger.log(`Sending Roblox-specific FunCaptcha request to 2captcha: ${formData.toString()}`);
+    
+    // Send the request to 2captcha
+    const submitResponse = await fetch('https://2captcha.com/in.php', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    });
+    
+    const responseText = await submitResponse.text();
+    logger.log(`2captcha raw response: ${responseText}`);
+    
+    let submitResult;
+    if (responseText.startsWith('OK|')) {
+      submitResult = {
+        status: 1,
+        request: responseText.substring(3)
+      };
+    } else {
+      try {
+        submitResult = JSON.parse(responseText);
+      } catch (e) {
+        throw new Error(`Invalid 2captcha response: ${responseText}`);
+      }
+    }
+    
+    if (submitResult.status !== 1) {
+      throw new Error(`2captcha error: ${submitResult.request || responseText}`);
+    }
+    
+    const captchaId = submitResult.request;
+    logger.log(`CAPTCHA submitted successfully, got ID: ${captchaId}`);
+    
+    // Wait for the initial delay
+    logger.log("Waiting 20 seconds before checking for results...");
+    await delay(20000);
+    
+    // Poll for the result
+    const maxAttempts = 40;
+    
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      logger.log(`Checking CAPTCHA solution status (attempt ${attempt}/${maxAttempts})...`);
+      
+      const resultUrl = `https://2captcha.com/res.php?key=${apiKey}&action=get&id=${captchaId}&json=1`;
+      const resultResponse = await fetch(resultUrl);
+      const resultText = await resultResponse.text();
+      
+      logger.log(`2captcha raw result: ${resultText}`);
+      
+      let resultData;
+      if (resultText.startsWith('OK|')) {
+        resultData = {
+          status: 1,
+          request: resultText.substring(3)
+        };
+      } else {
+        try {
+          resultData = JSON.parse(resultText);
+        } catch (e) {
+          logger.error(`Error parsing 2captcha result: ${e.message}`);
+          await delay(5000);
+          continue;
+        }
+      }
+      
+      if (resultData.status === 1) {
+        // Success - we have the token
+        const token = resultData.request;
+        logger.log(`CAPTCHA solved successfully! Token: ${token.substring(0, 20)}...`);
+        
+        // Inject the token into the page
+        const injected = await injectFunCaptchaToken(page, token);
+        return injected;
+      } else if (resultData.request === "CAPCHA_NOT_READY") {
+        // CAPTCHA is still being solved
+        logger.log("CAPTCHA still being solved, waiting...");
+        await delay(5000);
+        continue;
+      } else {
+        // Error
+        throw new Error(`2captcha error: ${resultData.request}`);
+      }
+    }
+    
+    throw new Error("Failed to get CAPTCHA solution after maximum attempts");
+  } catch (error) {
+    logger.error(`Roblox-specific FunCaptcha solution error: ${error.message}`);
+    return false;
+  }
+}
