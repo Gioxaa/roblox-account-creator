@@ -1,165 +1,155 @@
 # Roblox Account Creator
 
-Advanced automation tool for creating Roblox accounts with CAPTCHA solving capabilities.
+An automated tool for creating Roblox accounts with CAPTCHA solving capabilities.
 
 ## Features
 
 - Automated account creation on Roblox
-- Multi-threading support for parallel account creation
-- Auto-generation of usernames
-- FunCaptcha/Arkose Labs CAPTCHA support
-- Proxy rotation support
-- Human-like behavior with random delays
-- Comprehensive error handling and retries
-- Detailed logging system
-- Chrome profile support to avoid bot detection
-- Chrome extensions support
-- Human-like mouse movements and typing
+- Supports both automatic and manual CAPTCHA solving
+- Multiple CAPTCHA solving services support (2captcha, Anti-Captcha, CapMonster)
+- Human-like behavior simulation
+- Multi-threaded support for creating multiple accounts simultaneously
+- Sequential mode for creating numbered accounts
+- Proxy support
+- Chrome/Chromium browser support with profile persistence
+- Browser extension support
+- Detailed logging and screenshots
 
-## Requirements
+## Project Structure
 
-- Node.js (v14+)
-- NPM
-- Puppeteer
-- 2captcha API key (for automatic CAPTCHA solving)
-- Google Chrome (optional, for using real Chrome browser)
+The project has been organized into a modular structure for better maintainability:
+
+```
+roblox_acc/
+├── index.js                  # Main entry point
+├── config.json               # Configuration file
+├── proxies.txt               # Optional proxy list
+├── logs/                     # Log files directory
+├── profiles/                 # Browser profiles directory
+└── src/                      # Source code directory
+    ├── index.js              # Main application logic
+    ├── accountCreator.js     # Account creation module
+    ├── browser/              # Browser-related modules
+    │   ├── browserLauncher.js # Browser launching utilities
+    │   └── browserUtils.js   # Browser utilities
+    ├── captcha/              # CAPTCHA-related modules
+    │   ├── captchaBase.js    # Base CAPTCHA utilities
+    │   ├── captchaExtractor.js # CAPTCHA data extraction
+    │   ├── captchaHandler.js # CAPTCHA detection and handling
+    │   └── captchaSolver.js  # CAPTCHA solving implementations
+    └── utils/                # Utility modules
+        ├── config.js         # Configuration loading
+        ├── helpers.js        # Helper functions
+        └── logger.js         # Logging utilities
+```
 
 ## Installation
 
-1. Clone the repository:
-```
-git clone https://github.com/yourusername/roblox_acc.git
-cd roblox_acc
-```
-
+1. Clone the repository
 2. Install dependencies:
-```
-npm install
-```
-
-3. Configure the settings in `config.json` (see Configuration section)
+   ```
+   npm install
+   ```
+3. Configure the `config.json` file with your settings
+4. (Optional) Add proxies to `proxies.txt` (one per line)
 
 ## Configuration
 
-Edit the `config.json` file to adjust the script's behavior:
+Edit the `config.json` file to configure the application:
 
 ```json
 {
-  "baseName": "YourNamePrefix",     // Base name for generated accounts
-  "randomizeName": true,            // Add random characters to base name
-  "urutName": false,                // Use sequential numbering instead of random
-  "startIndex": 1,                  // Starting index for sequential numbering
-  "endIndex": 10,                   // Ending index for account creation
-  "password": "YourPassword123",    // Password for created accounts
-  "birthMonth": "Jan",              // Birth month (Jan, Feb, etc.)
-  "birthDay": "1",                  // Birth day (1-31)
-  "birthYear": "2000",              // Birth year (e.g., 2000)
-  "outputFile": "accounts.txt",     // File to save created accounts
-  "captchaSolve": true,             // Enable automatic CAPTCHA solving
-  "captchaApiKey": "YOUR_API_KEY",  // 2captcha API key
-  "siteKey": "A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",  // Roblox FunCaptcha key
-  "pageUrl": "https://www.roblox.com/",  // Roblox URL
-  "threads": 1,                     // Number of parallel browser instances
-  "retryAttempts": 3,               // Max retry attempts for failed accounts
-  "delayBetweenAccounts": 5000,     // Delay between account creations (ms)
-  "useProxies": false,              // Use proxies for account creation
-  "randomUserAgents": true,         // Randomize browser user agents
-  "enableLogging": true,            // Enable detailed logs
-  "verboseLog": true,               // Enable verbose logging
-  "headless": false,                // Run browsers in headless mode
-  "useChrome": true,                // Use real Chrome instead of Puppeteer's Chromium
-  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", // Path to Chrome executable
-  "useExtensions": true,            // Use Chrome extensions
-  "extensionsPath": "C:\\Users\\YourUsername\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions", // Path to Chrome extensions
-  "captchaService": "2captcha",     // CAPTCHA service to use
-  "funcaptchaOptions": {            // Advanced FunCaptcha settings
-    "subdomain": "arkoselabs.roblox.com",
-    "surl": "https://arkoselabs.roblox.com",
+  "baseName": "ElentinalPo",         // Base username
+  "randomizeName": true,             // Generate random usernames
+  "urutName": false,                 // Sequential numbering mode
+  "startIndex": 1,                   // Start index for sequential mode
+  "endIndex": 10,                    // End index for sequential mode
+  "password": "YourPassword123",     // Password for accounts
+  "birthMonth": "Mar",               // Birth month for accounts
+  "birthDay": "15",                  // Birth day for accounts
+  "birthYear": "2005",               // Birth year for accounts
+  "outputFile": "hasil_akun.txt",    // Output file for created accounts
+  
+  "captchaSolve": true,              // Enable automatic CAPTCHA solving
+  "captchaApiKey": "your-api-key",   // Default CAPTCHA API key
+  "siteKey": "A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F", // Roblox CAPTCHA site key
+  "pageUrl": "https://www.roblox.com/", // Roblox signup URL
+  
+  "threads": 1,                      // Number of parallel threads
+  "retryAttempts": 3,                // Retry attempts per account
+  "delayBetweenAccounts": 5000,      // Delay between accounts (ms)
+  "useProxies": false,               // Enable proxy usage
+  "randomUserAgents": true,          // Use random user agents
+  "enableLogging": true,             // Enable logging
+  "verboseLog": true,                // Enable verbose logging
+  "headless": false,                 // Run browser in headless mode
+  
+  "useChrome": false,                // Use Chrome instead of bundled Chromium
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", // Chrome path
+  "useExtensions": false,            // Enable browser extensions
+  "extensionsPath": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions", // Extensions path
+  "useProfileDir": true,             // Save browser profiles
+  
+  "captchaService": "2captcha",      // Default CAPTCHA service
+  "captchaServices": {               // CAPTCHA services configuration
+    "2captcha": {
+      "apiKey": "your-2captcha-key",
+      "enabled": true
+    },
+    "anticaptcha": {
+      "apiKey": "",
+      "enabled": false
+    },
+    "capmonster": {
+      "apiKey": "",
+      "enabled": false
+    }
+  },
+  "captchaMaxAttempts": 40,          // Max CAPTCHA solving attempts
+  "captchaTimeout": 120000,          // CAPTCHA timeout (ms)
+  "captchaRetryDelay": 5000,         // CAPTCHA retry delay (ms)
+  "funcaptchaOptions": {             // FunCaptcha specific options
+    "subdomain": "roblox-api.arkoselabs.com",
+    "surl": "https://roblox-api.arkoselabs.com",
     "data": {
       "blob": ""
-    }
+    },
+    "autoParseBlob": true
   }
 }
 ```
 
-## Chrome Profile and Anti-Detection Features
-
-The script includes several features to avoid bot detection:
-
-### Chrome Profiles
-
-- Each account creation uses a separate Chrome profile stored in the `profiles/` directory
-- Profiles persist between runs, allowing cookies and session data to be saved
-- This makes the browser appear more like a regular user's browser
-
-### Using Real Chrome
-
-To use your installed Chrome browser instead of Puppeteer's bundled Chromium:
-
-1. Set `useChrome` to `true` in config.json
-2. Set `chromePath` to the path of your Chrome executable
-   - Windows: Usually `C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe`
-   - Mac: `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`
-   - Linux: `/usr/bin/google-chrome`
-
-### Chrome Extensions
-
-You can use your existing Chrome extensions to further mask automation:
-
-1. Set `useExtensions` to `true` in config.json
-2. Set `extensionsPath` to the path of your Chrome extensions directory
-   - Windows: `C:\\Users\\YourUsername\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions`
-   - Mac: `~/Library/Application Support/Google/Chrome/Default/Extensions`
-   - Linux: `~/.config/google-chrome/Default/Extensions`
-
-Useful extensions for avoiding detection:
-- WebGL Fingerprint Defender
-- Canvas Fingerprint Defender
-- AudioContext Fingerprint Defender
-
-### Human-Like Behavior
-
-The script simulates human behavior to avoid detection:
-
-- Realistic mouse movements using bezier curves
-- Variable typing speed with random pauses
-- Random scrolling and interactions
-- Fingerprint spoofing
-
-## CAPTCHA Handling
-
-The script supports automatic solving of Arkose Labs FunCaptcha which Roblox uses for verification:
-
-1. **Automatic Solving**: Uses the 2captcha service. You must provide your own API key in the config.
-2. **Manual Fallback**: If automatic solving fails, the script will prompt for manual intervention.
-
-### CAPTCHA Configuration
-
-- The script automatically detects Roblox's CAPTCHA parameters from the page.
-- The configuration has default values for Roblox, but you can adjust them if needed.
-- Most CAPTCHA-related settings are in the `funcaptchaOptions` section of the config file.
-
-### Troubleshooting CAPTCHA
-
-If you're having issues with the CAPTCHA:
-
-- Make sure your 2captcha API key is valid and has funds 
-- Check the `logs/` directory for screenshots and error messages
-- Try enabling `verboseLog` to see detailed CAPTCHA detection process
-- Try different values for the `subdomain` setting if automatic detection fails
-
-## Proxy Support
-
-Add proxies to `proxies.txt`, one per line in format `ip:port` or `ip:port:username:password`
-
 ## Usage
 
-Start the account generator:
+Run the application:
 
 ```
 npm start
 ```
 
-## Disclaimer
+For sequential mode (creating numbered accounts):
+1. Set `urutName` to `true` in `config.json`
+2. Set `startIndex` and `endIndex` to define the range
 
-This tool is provided for educational purposes only. Use responsibly and in accordance with Roblox's Terms of Service. 
+For single account mode:
+1. Set `urutName` to `false` in `config.json`
+2. Set `randomizeName` to `true` for random usernames or `false` to use the base name
+
+For multi-threaded mode:
+1. Set `threads` to a value greater than 1 in `config.json`
+
+## CAPTCHA Solving
+
+The application supports multiple CAPTCHA solving services:
+
+1. **Automatic solving** using services like 2captcha, Anti-Captcha, or CapMonster
+2. **Manual solving** as a fallback when automatic solving fails
+
+To use automatic solving:
+1. Set `captchaSolve` to `true`
+2. Configure your preferred service in `captchaServices`
+3. Provide valid API keys
+
+## License
+
+ISC 

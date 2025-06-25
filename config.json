@@ -33,7 +33,7 @@
     "captchaService": "2captcha",
     "captchaServices": {
       "2captcha": {
-        "apiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+        "apiKey": "68e4e8e5dd0d5711328f12d5facc70b9",
         "enabled": true
       },
       "anticaptcha": {
@@ -53,7 +53,8 @@
       "surl": "https://roblox-api.arkoselabs.com",
       "data": {
         "blob": ""
-      }
+      },
+      "autoParseBlob": true
     }
   }
   

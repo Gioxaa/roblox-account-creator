@@ -124,3 +124,53 @@
 [2025-06-25T15:14:47.885Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
 [2025-06-25T15:15:08.401Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
 [2025-06-25T15:15:28.915Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T17:41:14.637Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:41:15.504Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:41:16.275Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:41:18.223Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:41:18.255Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:41:19.227Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:41:19.244Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:41:22.731Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:41:30.498Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_KEY_DOES_NOT_EXIST
+[2025-06-25T17:41:30.738Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_KEY_DOES_NOT_EXIST
+[2025-06-25T17:41:30.971Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_KEY_DOES_NOT_EXIST
+[2025-06-25T17:46:19.066Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:46:19.982Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:46:21.001Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:46:22.857Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:46:22.886Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:46:24.169Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:46:24.187Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:46:27.437Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:46:56.184Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T17:47:17.159Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T17:48:05.681Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:48:06.503Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:48:07.058Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:48:08.650Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:48:08.680Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:48:09.842Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:48:09.899Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:48:11.995Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:48:40.259Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T17:49:00.835Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T17:58:24.395Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:58:25.252Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:58:25.855Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:58:27.582Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:58:28.117Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:58:29.286Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:58:29.304Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T17:58:32.183Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T17:59:01.550Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T17:59:33.066Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T17:59:54.454Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:12:03.203Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:12:03.204Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:12:03.460Z] ERROR: Worker 0: CAPTCHA handling error: readline was closed
+[2025-06-25T20:12:18.471Z] ERROR: Worker 0: Failed to create account ElentinalPongex965: Account creation verification timed out
+[2025-06-25T20:13:20.639Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:13:20.639Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:13:41.167Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T20:13:41.167Z] ERROR: Roblox-specific FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
