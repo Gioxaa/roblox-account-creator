@@ -1,0 +1,59 @@
+{
+    "baseName": "ElentinalPo",
+    "randomizeName": true,
+    "urutName": false,
+    "startIndex": 1,
+    "endIndex": 10,
+    "password": "PasswordKuat123",
+    "birthMonth": "Mar",
+    "birthDay": "15",
+    "birthYear": "2005",
+    "outputFile": "hasil_akun.txt",
+    
+    "captchaSolve": true,
+    "captchaApiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+    "siteKey": "A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F",
+    "pageUrl": "https://www.roblox.com/",
+    
+    "threads": 1,
+    "retryAttempts": 3,
+    "delayBetweenAccounts": 5000,
+    "useProxies": false,
+    "randomUserAgents": true,
+    "enableLogging": true,
+    "verboseLog": true,
+    "headless": false,
+    
+    "useChrome": false,
+    "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "useExtensions": false,
+    "extensionsPath": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions",
+    "useProfileDir": true,
+    
+    "captchaService": "2captcha",
+    "captchaServices": {
+      "2captcha": {
+        "apiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+        "enabled": true
+      },
+      "anticaptcha": {
+        "apiKey": "",
+        "enabled": false
+      },
+      "capmonster": {
+        "apiKey": "",
+        "enabled": false
+      }
+    },
+    "captchaMaxAttempts": 40,
+    "captchaTimeout": 120000,
+    "captchaRetryDelay": 5000,
+    "funcaptchaOptions": {
+      "subdomain": "roblox-api.arkoselabs.com",
+      "surl": "https://roblox-api.arkoselabs.com",
+      "data": {
+        "blob": ""
+      }
+    }
+  }
+  

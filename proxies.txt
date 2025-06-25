@@ -1,0 +1,6 @@
+# Example proxies - replace with real ones
+# Format: ip:port or ip:port:username:password
+127.0.0.1:8080
+192.168.1.1:3128
+203.0.113.0:8080:user:pass
+198.51.100.0:3128:username:password 

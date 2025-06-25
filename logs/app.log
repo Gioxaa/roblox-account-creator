@@ -1,0 +1,767 @@
+[2025-06-25T14:42:40.687Z] Loaded 6 proxies
+[2025-06-25T14:42:40.691Z] ==================================
+[2025-06-25T14:42:40.691Z] ROBLOX ACCOUNT CREATOR - ENHANCED
+[2025-06-25T14:42:40.691Z] ==================================
+[2025-06-25T14:42:40.692Z] Configuration: {
+  "baseName": "ElentinalPo",
+  "randomizeName": true,
+  "urutName": false,
+  "startIndex": 1,
+  "endIndex": 10,
+  "password": "PasswordKuat123",
+  "birthMonth": "Mar",
+  "birthDay": "15",
+  "birthYear": "2005",
+  "outputFile": "hasil_akun.txt",
+  "captchaSolve": true,
+  "captchaApiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+  "siteKey": "A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F",
+  "pageUrl": "https://www.roblox.com/",
+  "threads": 1,
+  "retryAttempts": 3,
+  "delayBetweenAccounts": 5000,
+  "useProxies": false,
+  "randomUserAgents": true,
+  "enableLogging": true,
+  "verboseLog": true,
+  "headless": false,
+  "useChrome": false,
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "useExtensions": false,
+  "extensionsPath": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions",
+  "useProfileDir": true,
+  "captchaService": "2captcha",
+  "captchaServices": {
+    "2captcha": {
+      "apiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+      "enabled": true
+    },
+    "anticaptcha": {
+      "apiKey": "",
+      "enabled": false
+    },
+    "capmonster": {
+      "apiKey": "",
+      "enabled": false
+    }
+  },
+  "captchaMaxAttempts": 40,
+  "captchaTimeout": 120000,
+  "captchaRetryDelay": 3000,
+  "funcaptchaOptions": {
+    "subdomain": "client-api.arkoselabs.com",
+    "surl": "https://client-api.arkoselabs.com",
+    "data": {
+      "blob": ""
+    }
+  }
+}
+[2025-06-25T14:42:40.696Z] Worker 0: Launching browser with full options
+[2025-06-25T14:42:50.623Z] Worker 0: Creating account ElentinalPoqcim572
+[2025-06-25T14:42:55.387Z] Saved pre-signup screenshot to logs\before_signup_ElentinalPoqcim572_1750862575047.png
+[2025-06-25T14:42:55.432Z] Worker 0: Clicked signup for ElentinalPoqcim572
+[2025-06-25T14:42:56.639Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/api.js
+[2025-06-25T14:42:56.975Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/settings
+[2025-06-25T14:42:57.128Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gt2/public_key/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F
+[2025-06-25T14:42:57.261Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.html#A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&6421487f-79a0-4f2e-86be-bb34177395e7
+[2025-06-25T14:42:57.308Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.js
+[2025-06-25T14:42:57.371Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/ec-game-core/bootstrap/1.27.8/standard/game_core_bootstrap.js
+[2025-06-25T14:42:57.447Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/init-load/?session_token=292184c503ce7d046.0423748804
+[2025-06-25T14:42:57.450Z] Worker 0: CAPTCHA detected via DOM scan: Found CAPTCHA keyword: captcha
+[2025-06-25T14:42:57.452Z] Worker 0: Checking for CAPTCHA for ElentinalPoqcim572
+[2025-06-25T14:42:57.454Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/index.html?session=292184c503ce7d046.0423748804&r=ap-southeast-1&meta=3&metabgclr=transparent&metaiconclr=%23757575&maintxtclr=%23b8b8b8&guitextcolor=%23474747&pk=A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&at=40&ag=101&cdn_url=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc&surl=https%3A%2F%2Farkoselabs.roblox.com&smurl=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc%2Fassets%2Fstyle-manager&theme=default
+[2025-06-25T14:42:57.457Z] CAPTCHA resource detected: https://ecsv2.roblox.com/www/e.png?type=visible&provider=FunCaptcha&ucid=7d313448-f2a6-4c21-86bb-5691a2361aad&session=292184c503ce7d046.0423748804%7Cr%3Dap-southeast-1%7Cmeta%3D3%7Cmetabgclr%3Dtransparent%7Cmetaiconclr%3D%2523757575%7Cmaintxtclr%3D%2523b8b8b8%7Cguitextcolor%3D%2523474747%7Cpk%3DA2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F%7Cat%3D40%7Cag%3D101%7Ccdn_url%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%7Csurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%7Csmurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%252Fassets%252Fstyle-manager&message=&providerVersion=V2&evt=captchaInitiated&ctx=Signup&url=https%3A%2F%2Fwww.roblox.com%2F&lt=2025-06-25T14%3A42%3A57.455Z&gid=-172886295
+[2025-06-25T14:42:57.462Z] Found 3 CAPTCHA-related network resources
+[2025-06-25T14:42:57.462Z] Worker 0: CAPTCHA detected for ElentinalPoqcim572
+[2025-06-25T14:42:57.523Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gfct/
+[2025-06-25T14:42:57.525Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/main.dd291841a4abd1b7f8e5.js
+[2025-06-25T14:42:57.846Z] Saved pre-CAPTCHA screenshot to logs\before_captcha_ElentinalPoqcim572_1750862577463.png
+[2025-06-25T14:42:57.847Z] Waiting for CAPTCHA iframe to fully load...
+[2025-06-25T14:42:57.849Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/lib.chunk.c06d0f6f0277344853b7.js
+[2025-06-25T14:42:57.850Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/320.vendors.cca9b16e97778e82aac7.js
+[2025-06-25T14:42:57.851Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/378.chunk.349d16c9bdd4ced95453.js
+[2025-06-25T14:42:57.857Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/542.vendors.abe0e64e95582406fe38.js
+[2025-06-25T14:42:57.859Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/924.vendors.ea33e7ebaefd19354536.js
+[2025-06-25T14:42:57.860Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/571.chunk.6c3590476902f9ef2cdf.js
+[2025-06-25T14:42:58.049Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T14:42:58.050Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/style-manager/styles/ed325c08-10a9-44ca-be7b-a6983517d479.css
+[2025-06-25T14:42:58.062Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T14:42:58.064Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/remoteEntry.js
+[2025-06-25T14:43:00.857Z] Worker 0: Attempting to solve CAPTCHA automatically for ElentinalPoqcim572
+[2025-06-25T14:43:00.860Z] CAPTCHA preparation result: Prepared CAPTCHA elements
+[2025-06-25T14:43:02.872Z] CAPTCHA solving attempt 1/3
+[2025-06-25T14:43:02.874Z] Attempting to solve CAPTCHA automatically with 2captcha API
+[2025-06-25T14:43:02.875Z] Found CAPTCHA service URL: https://ecsv2.roblox.com
+[2025-06-25T14:43:02.876Z] Updated subdomain to: ecsv2.roblox.com
+[2025-06-25T14:43:02.876Z] Attempting to extract Roblox FunCaptcha data
+[2025-06-25T14:43:02.879Z] Using default CAPTCHA configuration
+[2025-06-25T14:43:02.879Z] Found CAPTCHA key from page DOM: A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F
+[2025-06-25T14:43:02.879Z] Using CAPTCHA subdomain: ecsv2.roblox.com
+[2025-06-25T14:43:02.881Z] Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+[2025-06-25T14:43:02.882Z] Trying CAPTCHA service: 2captcha
+[2025-06-25T14:43:02.882Z] 2captcha request params: {"clientKey":"47bc4a36c08d5a78aa7809cd888a46ab","task":{"type":"FunCaptchaTaskProxyless","websiteURL":"https://www.roblox.com/","websitePublicKey":"A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F","funcaptchaApiJSSubdomain":"ecsv2.roblox.com","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"}}
+[2025-06-25T14:43:02.883Z] Creating 2captcha task...
+[2025-06-25T14:43:03.447Z] 2captcha createTask response: {"errorId":0,"taskId":79958824851}
+[2025-06-25T14:43:03.448Z] 2captcha task created successfully with ID: 79958824851
+[2025-06-25T14:43:03.448Z] Waiting for 2captcha to solve the CAPTCHA...
+[2025-06-25T14:43:03.448Z] Checking CAPTCHA solution status (attempt 1/40)...
+[2025-06-25T14:43:06.676Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:43:06.677Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:43:06.677Z] Checking CAPTCHA solution status (attempt 2/40)...
+[2025-06-25T14:43:10.515Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:10.516Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:10.516Z] Checking CAPTCHA solution status (attempt 3/40)...
+[2025-06-25T14:43:15.068Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:15.069Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:15.069Z] Checking CAPTCHA solution status (attempt 4/40)...
+[2025-06-25T14:43:20.569Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:20.570Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:20.570Z] Checking CAPTCHA solution status (attempt 5/40)...
+[2025-06-25T14:43:26.049Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:26.050Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:26.050Z] Checking CAPTCHA solution status (attempt 6/40)...
+[2025-06-25T14:43:31.593Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:31.593Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:31.594Z] Checking CAPTCHA solution status (attempt 7/40)...
+[2025-06-25T14:43:36.930Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:36.930Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:36.931Z] Checking CAPTCHA solution status (attempt 8/40)...
+[2025-06-25T14:43:42.458Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:42.459Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:42.459Z] Checking CAPTCHA solution status (attempt 9/40)...
+[2025-06-25T14:43:47.773Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:47.774Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:47.774Z] Checking CAPTCHA solution status (attempt 10/40)...
+[2025-06-25T14:43:53.291Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:53.291Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:53.292Z] Checking CAPTCHA solution status (attempt 11/40)...
+[2025-06-25T14:43:58.795Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:43:58.796Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:43:58.796Z] Checking CAPTCHA solution status (attempt 12/40)...
+[2025-06-25T14:44:04.328Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:04.328Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:04.329Z] Checking CAPTCHA solution status (attempt 13/40)...
+[2025-06-25T14:44:09.835Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:09.836Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:09.836Z] Checking CAPTCHA solution status (attempt 14/40)...
+[2025-06-25T14:44:15.345Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:15.346Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:15.346Z] Checking CAPTCHA solution status (attempt 15/40)...
+[2025-06-25T14:44:21.100Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:21.101Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:21.101Z] Checking CAPTCHA solution status (attempt 16/40)...
+[2025-06-25T14:44:26.444Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:26.445Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:26.445Z] Checking CAPTCHA solution status (attempt 17/40)...
+[2025-06-25T14:44:31.782Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:31.783Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:31.784Z] Checking CAPTCHA solution status (attempt 18/40)...
+[2025-06-25T14:44:37.139Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:37.139Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:37.140Z] Checking CAPTCHA solution status (attempt 19/40)...
+[2025-06-25T14:44:42.659Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:42.659Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:44:42.660Z] Checking CAPTCHA solution status (attempt 20/40)...
+[2025-06-25T14:44:48.188Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:48.189Z] Checking CAPTCHA solution status (attempt 21/40)...
+[2025-06-25T14:44:53.696Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:53.697Z] Checking CAPTCHA solution status (attempt 22/40)...
+[2025-06-25T14:44:59.020Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:44:59.021Z] Checking CAPTCHA solution status (attempt 23/40)...
+[2025-06-25T14:45:04.574Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:04.575Z] Checking CAPTCHA solution status (attempt 24/40)...
+[2025-06-25T14:45:10.101Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:10.102Z] Checking CAPTCHA solution status (attempt 25/40)...
+[2025-06-25T14:45:15.611Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:15.612Z] Checking CAPTCHA solution status (attempt 26/40)...
+[2025-06-25T14:45:20.926Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:20.927Z] Checking CAPTCHA solution status (attempt 27/40)...
+[2025-06-25T14:45:26.481Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:26.482Z] Checking CAPTCHA solution status (attempt 28/40)...
+[2025-06-25T14:45:31.969Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:31.971Z] Checking CAPTCHA solution status (attempt 29/40)...
+[2025-06-25T14:45:37.306Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:37.307Z] Checking CAPTCHA solution status (attempt 30/40)...
+[2025-06-25T14:45:42.820Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:42.821Z] Checking CAPTCHA solution status (attempt 31/40)...
+[2025-06-25T14:45:42.853Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T14:45:42.862Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/301.vendors.8c51fa5660365a7e3cdc.js
+[2025-06-25T14:45:42.863Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/549.chunk.4c8b5d949691748e8ce4.js
+[2025-06-25T14:45:42.864Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/264.chunk.deed2ff73a1973b168c8.js
+[2025-06-25T14:45:42.968Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=0&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=WJnOmH9hywq%2BSfk0r25UdxY8rrRAVup9qimwXdAsBcfl%2BL9qfnmKGB%2BJA%2BFfsrdvrpgMFHIDg20pIYJUUbQVs%2FST2GbKA6obY%2BQUX0jXMdfG8vj%2FavjezfcBextTjd2l8QFaAgUDz0VNHWErLx8WW5zgdp55daIuLxzGfYa7XvqrJd%2BHlLMo%2B4WOdq0TC0NSu17SHkX4v67KEh%2FU9R9ZabKyCf0y9OAjZ8y5Ud11FHtHIqPyABuuBRezN4mcwV7BGkIGBsKZOeCnIwkA0%2FeQsIJzuzEEgQUhoXmgFl%2BtIeCyuQPqZwL07hirUGs1JGDWsbLi5Gxa10vPn0r%2FyCwong%3D%3D
+[2025-06-25T14:45:48.381Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:48.382Z] Checking CAPTCHA solution status (attempt 32/40)...
+[2025-06-25T14:45:53.898Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:53.899Z] Checking CAPTCHA solution status (attempt 33/40)...
+[2025-06-25T14:45:55.594Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:45:56.606Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=1&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=l%2FopEpmaIe7OYGf7jKmK%2BNBSTXt8xIoOenZRcOl1QJup%2FoKXWKxMAdRcl4OOuzeGEGUSrUIOfVc4UsQvudoImlZZZHM9yR7pZXUaxzvY4y0Bqge%2BjjSueIf9RgIuw02cRkBln9%2BLYa0Q7K3vyYDE%2FoercWpsdzG08gH8%2BMnRxwnnRJ8v2oO%2BY%2F6BwKm%2BM58dnFnXmN%2BLC94l60sLGo%2BL6JVrrxfChgGW5M3eSbyEgRqM2KwZoQvhDslUJ6nCYTX1GZqTictmw9%2FFIXXs0CbTtHwAaNSNxyBEaO%2F00fAThJ%2BqRTcbFLX160uKn%2F80xhrzjbijyYuaLH1jYsrgfQ8IAw%3D%3D
+[2025-06-25T14:45:59.255Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:45:59.256Z] Checking CAPTCHA solution status (attempt 34/40)...
+[2025-06-25T14:46:04.613Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:46:04.615Z] Checking CAPTCHA solution status (attempt 35/40)...
+[2025-06-25T14:46:07.383Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:46:08.389Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=2&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=tCkWRIE5XEwjmBD9aXDseypctr9L0ohIRqdeh1tAsD%2BBJapw80y5ko%2F2Hadv%2F94c4BSnAHLgpuoB%2F%2FpVki4OkGLafFIm5j58a63zvxaUfXtRBe%2FVpr5f3%2BHVkzAC%2F2dg0lNR8g14%2F0ZoYEOnYbZ16E20GDJGzwdTsG7BUSF3sY96PGTqEq3R330bIorCgMGf3s3mV6RsaQkpHRY%2Fyyrn38fZ%2FfJy8auNGvL6nlagoG5nH9eyG0YtkTXGPfDw4czAEuTT%2B8BzZlXrIAGLwK86jmoGUMwBidtHnQtF9mtkffX5e9OUlwNpV0TeMYr8OV81werkL2Ek57tBdApctiX9iw%3D%3D
+[2025-06-25T14:46:10.178Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:46:10.179Z] Checking CAPTCHA solution status (attempt 36/40)...
+[2025-06-25T14:46:15.546Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:46:15.547Z] Checking CAPTCHA solution status (attempt 37/40)...
+[2025-06-25T14:46:21.091Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:46:21.092Z] Checking CAPTCHA solution status (attempt 38/40)...
+[2025-06-25T14:46:23.808Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:46:24.818Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=3&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=lr6%2BSPnmvemMX11aRNGlw5rLdfPq%2FrZUkB7b0k1uyyZvpvlKN4xntMw0xWB%2F3ySl64ZJ%2F%2BbasBUOHegmSWElIIVG781EE7voz4%2FmfQLCtkEvh1FzgORoZLp5Zyv%2BtUs%2BqEIzP3Y36aTUSk4WnH95h6YHc0sroofrMGIkFgf32FNWcwSHM%2BjNOhHlx6VqPU9a4ya4YRL4ZhZKwRmwsPw8ejAhEK5%2BCIUVl7LMRu2Wi5YdFQmR%2FCfxP6kuJZ9fjrHtj6XLTivA9oOmtOqH0sU228302E%2FGcScpcG7tf0bYP9IXGBoApbEhbHRRwYJ4qlQujYR98D6Kh0EkT7L5KwbdMg%3D%3D
+[2025-06-25T14:46:26.691Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:46:26.692Z] Checking CAPTCHA solution status (attempt 39/40)...
+[2025-06-25T14:46:29.079Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:46:30.088Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=4&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=dm1souojdqcsm42ddL8SOz%2FqVGmBzePQ6%2Bpirnw5jtxgP%2F95mUcKCrFfTUEB1%2BZb5xlxJqc%2F3u5E7aKrXjLLps4pYktR%2B2oSSfsjEmwN%2BKNQzkqay4BvEJ1AcUdoGmGsZdBj7RjTW20ZvABgQcmSx1a5T92dOO%2B%2FC1hl6MY0FR44hMtLy8EBu8yVvRXLu6su14rD3oF1o4G2mK2tIiQ4NTaRLOC%2BugO6x9QwIsAV%2B%2B6pWTxhPOPXsuSUGxOZkNmtPnQwermLH9ZcMnSrbh97vUhhttCznZraw6GnmBVa8rGPyH9LdigSxvRNHdmvZw0kGi0xZWK0jhuRp6E6SoyeNg%3D%3D
+[2025-06-25T14:46:32.269Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:46:32.270Z] Checking CAPTCHA solution status (attempt 40/40)...
+[2025-06-25T14:46:36.007Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:46:37.016Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=5&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=BE3FBZQBpfLB2tyvP0XuMv3B8x0zTuqKSGYm1BcQvVvXh6Yza6iJPi9o2TRZrQsTZrwffSmG%2Fc2Ae5Py4m9M955BouHMwXvvTh3oBeeulkKQO1gFzO3AQqRR076zxtAsH8NwjW3tfEbHelVNsHUOAKDMjJumq6CcrDe62zarbp0sUgwgrHR%2FcnRLa69m7WbaswCp%2BCYZWewdmsW9LIsl3pyw2O42lhAhihyBuyhfZAI0r4ud%2BHI4SF66M%2FEqVIx5UZP04%2F%2BbwXCA1qrOaeba6MFFhA%2B4c%2BDI%2BsTTQKuf1Z924Y1imWRKpwEiQDbwtaA%2B82jN4esEptM110%2F39W%2FzAQ%3D%3D
+[2025-06-25T14:46:37.672Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:46:37.674Z] CAPTCHA solving attempt 2/3
+[2025-06-25T14:46:37.674Z] Attempting to solve CAPTCHA automatically with 2captcha API
+[2025-06-25T14:46:37.676Z] Found CAPTCHA service URL: https://ecsv2.roblox.com
+[2025-06-25T14:46:37.676Z] Updated subdomain to: ecsv2.roblox.com
+[2025-06-25T14:46:37.676Z] Attempting to extract Roblox FunCaptcha data
+[2025-06-25T14:46:37.678Z] Using default CAPTCHA configuration
+[2025-06-25T14:46:37.678Z] Found CAPTCHA key from page DOM: A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F
+[2025-06-25T14:46:37.679Z] Using CAPTCHA subdomain: ecsv2.roblox.com
+[2025-06-25T14:46:37.679Z] Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+[2025-06-25T14:46:37.680Z] Trying CAPTCHA service: 2captcha
+[2025-06-25T14:46:37.681Z] 2captcha request params: {"clientKey":"47bc4a36c08d5a78aa7809cd888a46ab","task":{"type":"FunCaptchaTaskProxyless","websiteURL":"https://www.roblox.com/","websitePublicKey":"A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F","funcaptchaApiJSSubdomain":"ecsv2.roblox.com","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"}}
+[2025-06-25T14:46:37.681Z] Creating 2captcha task...
+[2025-06-25T14:46:37.940Z] 2captcha createTask response: {"errorId":0,"taskId":79958850487}
+[2025-06-25T14:46:37.940Z] 2captcha task created successfully with ID: 79958850487
+[2025-06-25T14:46:37.941Z] Waiting for 2captcha to solve the CAPTCHA...
+[2025-06-25T14:46:37.941Z] Checking CAPTCHA solution status (attempt 1/40)...
+[2025-06-25T14:46:41.193Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:46:41.193Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:46:41.194Z] Checking CAPTCHA solution status (attempt 2/40)...
+[2025-06-25T14:46:44.583Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:46:45.060Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:46:45.060Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:46:45.061Z] Checking CAPTCHA solution status (attempt 3/40)...
+[2025-06-25T14:46:45.587Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=6&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=c7hBRTF7KqsMtMhmYfq4GRirD0SCvpFAAI4SszhRK%2BTOlOBK6pJI4C8nUx1lOkDS9wlOxUPfFw1BHSTSIa5aGJoXcBzbl1hgkCe0NYIHltsXtH%2Fd2R2Kf0kaiLohaLJyuawjqYOVm54jrEJQTRJCVjUvmylJPAjweWKpWs7h4FCleC1%2FQMlyRLIQWLAhNzVFEsUEkLwWQUse4ehKFVK18xtrB83WM0UIGq9rukeuW8dkHVHxPYW%2FJk7JlI4zgXd3dYHG%2Br%2Fh%2BE6z34b4pvKRkp6SFVLH48TrRqJkYE2B1CzccnYZrz4G7Rs%2Bdh8PqzEKC2p9yf3SCHJsm2t1BcyrEA%3D%3D
+[2025-06-25T14:46:49.647Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:46:49.647Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:46:49.648Z] Checking CAPTCHA solution status (attempt 4/40)...
+[2025-06-25T14:46:50.839Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:46:51.849Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=7&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=BiJVFhtTbDNtTZ9oYdeC9XR82vGHfYQYGWKmAR0n%2BZRrK38Df4xCqR4bp6dnROjj%2FXbdO8RlpZWuqDJjv4wF6XJBQuTyoJnR1MZSO2AgIbvsK7JUVchoG63UtHIvdwVdEZlPrG9s4nOjp9rQ9omGn0ECSyhhVwZJldM%2BxBLydgco3NJMzakarRP4ABGgjP58qTWBFW8trCqZp8Cj7tE71ccOT0UxDRPUqwPMrHV6KDVObbO0MXFtbqXomPVCBERx7PT4163pRSmvXBs6GqjOUPiIuxQCweoM5eEwRD0Jwh6ktZmrNr1VuI8sZcokfoZs7%2FvXwXWvwudP4rFW%2BHqX7Q%3D%3D
+[2025-06-25T14:46:54.967Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:46:54.968Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:46:54.968Z] Checking CAPTCHA solution status (attempt 5/40)...
+[2025-06-25T14:46:58.583Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:46:59.588Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=8&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=Z8CHDG%2FLrAfgBm2xtPsyRBHoQ61P%2FbcE%2BArIm1Tjgwz2fvgWvi5CMcUiDKkIV%2Fsap62uNkbQc0XYt8VZc2J0Tm%2BhhUTDDsSEwUpv67%2F0qQzPjHSYwXUY%2BNm9lxDjVCfdCL%2BrOEzDfn6Nf6G4l%2BCqY2QxYfdDn0OPzq81rSxk594j0uphh330PFjUWa%2FvwxHKDtXu%2B0BzfPZstkOCeEreFv2hK7hhzMeJ5g8Bc0cjXl%2BYPazCa2EuTDEIP4xCpRXyy6dbcV3wZW7JGcJo8ULeJB6vC5P4Au1Tik5kV9s7YDszOTqgl1RVnR2ldgmDRzcxYpluAdNMhBdqE03tgd%2BXmQ%3D%3D
+[2025-06-25T14:47:00.494Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:00.494Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:00.495Z] Checking CAPTCHA solution status (attempt 6/40)...
+[2025-06-25T14:47:04.911Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:47:05.920Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=9&expires=1750866177&gameToken=905184c503c9dc578.8696455204&sessionToken=292184c503ce7d046.0423748804&signature=fMTkyws1k1%2B40rtdgI2LIaEmxQxkdjns%2BBgInvz4nnle79YPq8J7wswdd06vwVOa38%2B1iNryE5iW07yCSRJuD49c%2B%2FR2jLes%2BiINvpVMkqG7I1lZ61l2zmVnjeNVnFeJW0x994fjNCHwRrPvkHz3yw6bXXV3XWvyR3UUR6e3wYv6%2FOhPXXCFAWd4F8YdjkyCEanfaNCgd4cqvkTC%2FZrNz6xie9JM6xe9XXklpES3w0ErdThuJAhVseEGRxKW3mY0n%2Fi1jqn66u8NUhMAfG77wpVFHHi66Q%2BoTStjvAdjeH196dSOo18ipX18PJHTi91t2pDSRvaxJz26483wsg%2Bs1w%3D%3D
+[2025-06-25T14:47:05.990Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:05.991Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:05.991Z] Checking CAPTCHA solution status (attempt 7/40)...
+[2025-06-25T14:47:11.332Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:11.333Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:11.333Z] Checking CAPTCHA solution status (attempt 8/40)...
+[2025-06-25T14:47:13.360Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/ca/
+[2025-06-25T14:47:14.370Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/style-manager/assets/2c11f0f3-9b57-4534-b72c-764664141b9b.png
+[2025-06-25T14:47:16.382Z] CAPTCHA resource detected: https://ecsv2.roblox.com/www/e.png?solveDuration=258923&success=true&provider=FunCaptcha&session=292184c503ce7d046.0423748804%7Cr%3Dap-southeast-1%7Cmeta%3D3%7Cmetabgclr%3Dtransparent%7Cmetaiconclr%3D%2523757575%7Cmaintxtclr%3D%2523b8b8b8%7Cguitextcolor%3D%2523474747%7Cpk%3DA2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F%7Cat%3D40%7Cag%3D101%7Ccdn_url%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%7Csurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%7Csmurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%252Fassets%252Fstyle-manager&ucid=7d313448-f2a6-4c21-86bb-5691a2361aad&providerVersion=V2&evt=captcha&ctx=Signup&url=https%3A%2F%2Fwww.roblox.com%2F&lt=2025-06-25T14%3A47%3A16.378Z&gid=-172886295
+[2025-06-25T14:47:16.668Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:16.669Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:16.669Z] Checking CAPTCHA solution status (attempt 9/40)...
+[2025-06-25T14:47:22.226Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:22.226Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:22.227Z] Checking CAPTCHA solution status (attempt 10/40)...
+[2025-06-25T14:47:27.742Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:27.742Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:27.743Z] Checking CAPTCHA solution status (attempt 11/40)...
+[2025-06-25T14:47:33.425Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:33.425Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:33.426Z] Checking CAPTCHA solution status (attempt 12/40)...
+[2025-06-25T14:47:38.787Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:38.788Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:38.789Z] Checking CAPTCHA solution status (attempt 13/40)...
+[2025-06-25T14:47:44.302Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:44.303Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:44.303Z] Checking CAPTCHA solution status (attempt 14/40)...
+[2025-06-25T14:47:49.865Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:49.865Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:49.866Z] Checking CAPTCHA solution status (attempt 15/40)...
+[2025-06-25T14:47:55.417Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:47:55.417Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:47:55.418Z] Checking CAPTCHA solution status (attempt 16/40)...
+[2025-06-25T14:48:00.943Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:48:00.944Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:48:00.944Z] Checking CAPTCHA solution status (attempt 17/40)...
+[2025-06-25T14:48:06.483Z] 2captcha result response: {"errorId":0,"status":"processing"}
+[2025-06-25T14:48:06.483Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:48:06.483Z] Checking CAPTCHA solution status (attempt 18/40)...
+[2025-06-25T14:48:12.037Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:12.038Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:48:12.038Z] Checking CAPTCHA solution status (attempt 19/40)...
+[2025-06-25T14:48:17.390Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:17.391Z] CAPTCHA reported as unsolvable, continuing to retry...
+[2025-06-25T14:48:17.391Z] Checking CAPTCHA solution status (attempt 20/40)...
+[2025-06-25T14:48:22.763Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:22.765Z] Checking CAPTCHA solution status (attempt 21/40)...
+[2025-06-25T14:48:28.262Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:28.263Z] Checking CAPTCHA solution status (attempt 22/40)...
+[2025-06-25T14:48:33.786Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:33.787Z] Checking CAPTCHA solution status (attempt 23/40)...
+[2025-06-25T14:48:39.128Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:39.129Z] Checking CAPTCHA solution status (attempt 24/40)...
+[2025-06-25T14:48:44.457Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:44.458Z] Checking CAPTCHA solution status (attempt 25/40)...
+[2025-06-25T14:48:49.737Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:49.738Z] Checking CAPTCHA solution status (attempt 26/40)...
+[2025-06-25T14:48:55.217Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:48:55.218Z] Checking CAPTCHA solution status (attempt 27/40)...
+[2025-06-25T14:49:00.509Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:00.510Z] Checking CAPTCHA solution status (attempt 28/40)...
+[2025-06-25T14:49:05.823Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:05.824Z] Checking CAPTCHA solution status (attempt 29/40)...
+[2025-06-25T14:49:11.484Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:11.485Z] Checking CAPTCHA solution status (attempt 30/40)...
+[2025-06-25T14:49:17.038Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:17.039Z] Checking CAPTCHA solution status (attempt 31/40)...
+[2025-06-25T14:49:22.357Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:22.358Z] Checking CAPTCHA solution status (attempt 32/40)...
+[2025-06-25T14:49:27.879Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:27.881Z] Checking CAPTCHA solution status (attempt 33/40)...
+[2025-06-25T14:49:33.670Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:33.671Z] Checking CAPTCHA solution status (attempt 34/40)...
+[2025-06-25T14:49:39.168Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:39.169Z] Checking CAPTCHA solution status (attempt 35/40)...
+[2025-06-25T14:49:44.506Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:44.507Z] Checking CAPTCHA solution status (attempt 36/40)...
+[2025-06-25T14:49:49.844Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:49.845Z] Checking CAPTCHA solution status (attempt 37/40)...
+[2025-06-25T14:49:55.382Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:49:55.383Z] Checking CAPTCHA solution status (attempt 38/40)...
+[2025-06-25T14:50:00.908Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:50:00.909Z] Checking CAPTCHA solution status (attempt 39/40)...
+[2025-06-25T14:50:06.442Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:50:06.443Z] Checking CAPTCHA solution status (attempt 40/40)...
+[2025-06-25T14:50:11.792Z] 2captcha result response: {"errorId":12,"errorCode":"ERROR_CAPTCHA_UNSOLVABLE","errorDescription":"Workers could not solve the Captcha"}
+[2025-06-25T14:50:11.794Z] CAPTCHA solving attempt 3/3
+[2025-06-25T14:50:11.794Z] Attempting to solve CAPTCHA automatically with 2captcha API
+[2025-06-25T14:50:11.794Z] Attempting to extract Roblox FunCaptcha data
+[2025-06-25T14:50:11.795Z] Found CAPTCHA key from page DOM: A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F
+[2025-06-25T14:50:11.796Z] Using CAPTCHA subdomain: ecsv2.roblox.com
+[2025-06-25T14:50:11.796Z] Worker 0: Automatic solving failed after 3 attempts, falling back to manual for ElentinalPoqcim572
+[2025-06-25T14:50:11.796Z] Worker 0: Please solve the CAPTCHA manually for ElentinalPoqcim572
+[2025-06-25T14:50:11.797Z] INSTRUCTIONS: Solve the CAPTCHA in the browser window, then press ENTER in terminal
+[2025-06-25T14:50:15.298Z] Worker 0: Manual CAPTCHA completed, waiting for processing...
+[2025-06-25T14:50:20.305Z] Manual CAPTCHA verification successful - redirected to new page
+[2025-06-25T14:50:20.305Z] Worker 0: Waiting for account creation verification...
+[2025-06-25T14:50:20.307Z] Worker 0: Retry attempt 2 for account ElentinalPoqcim572
+[2025-06-25T14:54:44.150Z] Loaded 6 proxies
+[2025-06-25T14:54:44.154Z] ==================================
+[2025-06-25T14:54:44.154Z] ROBLOX ACCOUNT CREATOR - ENHANCED
+[2025-06-25T14:54:44.154Z] ==================================
+[2025-06-25T14:54:44.155Z] Configuration: {
+  "baseName": "ElentinalPo",
+  "randomizeName": true,
+  "urutName": false,
+  "startIndex": 1,
+  "endIndex": 10,
+  "password": "PasswordKuat123",
+  "birthMonth": "Mar",
+  "birthDay": "15",
+  "birthYear": "2005",
+  "outputFile": "hasil_akun.txt",
+  "captchaSolve": true,
+  "captchaApiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+  "siteKey": "A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F",
+  "pageUrl": "https://www.roblox.com/",
+  "threads": 1,
+  "retryAttempts": 3,
+  "delayBetweenAccounts": 5000,
+  "useProxies": false,
+  "randomUserAgents": true,
+  "enableLogging": true,
+  "verboseLog": true,
+  "headless": false,
+  "useChrome": false,
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "useExtensions": false,
+  "extensionsPath": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions",
+  "useProfileDir": true,
+  "captchaService": "2captcha",
+  "captchaServices": {
+    "2captcha": {
+      "apiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+      "enabled": true
+    },
+    "anticaptcha": {
+      "apiKey": "",
+      "enabled": false
+    },
+    "capmonster": {
+      "apiKey": "",
+      "enabled": false
+    }
+  },
+  "captchaMaxAttempts": 40,
+  "captchaTimeout": 120000,
+  "captchaRetryDelay": 5000,
+  "funcaptchaOptions": {
+    "subdomain": "client-api.arkoselabs.com",
+    "surl": "https://client-api.arkoselabs.com",
+    "data": {
+      "blob": ""
+    }
+  }
+}
+[2025-06-25T14:54:44.159Z] Worker 0: Launching browser with full options
+[2025-06-25T14:54:57.302Z] Worker 0: Creating account ElentinalPobxfy69
+[2025-06-25T14:55:00.824Z] Saved pre-signup screenshot to logs\before_signup_ElentinalPobxfy69_1750863300510.png
+[2025-06-25T14:55:00.868Z] Worker 0: Clicked signup for ElentinalPobxfy69
+[2025-06-25T14:55:01.812Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/api.js
+[2025-06-25T14:55:02.080Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/settings
+[2025-06-25T14:55:02.228Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gt2/public_key/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F
+[2025-06-25T14:55:02.366Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.html#A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&a86cc82a-e669-4bb6-a32f-41135755af21
+[2025-06-25T14:55:02.421Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.js
+[2025-06-25T14:55:02.504Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/ec-game-core/bootstrap/1.27.8/standard/game_core_bootstrap.js
+[2025-06-25T14:55:02.591Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/init-load/?session_token=618184c50e556ac58.2535834704
+[2025-06-25T14:55:02.595Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/index.html?session=618184c50e556ac58.2535834704&r=ap-southeast-1&meta=3&metabgclr=transparent&metaiconclr=%23757575&maintxtclr=%23b8b8b8&guitextcolor=%23474747&pk=A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&at=40&ag=101&cdn_url=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc&surl=https%3A%2F%2Farkoselabs.roblox.com&smurl=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc%2Fassets%2Fstyle-manager&theme=default
+[2025-06-25T14:55:02.599Z] CAPTCHA resource detected: https://ecsv2.roblox.com/www/e.png?type=visible&provider=FunCaptcha&ucid=41495908-9f42-4024-a67d-2e9d7d5145f6&session=618184c50e556ac58.2535834704%7Cr%3Dap-southeast-1%7Cmeta%3D3%7Cmetabgclr%3Dtransparent%7Cmetaiconclr%3D%2523757575%7Cmaintxtclr%3D%2523b8b8b8%7Cguitextcolor%3D%2523474747%7Cpk%3DA2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F%7Cat%3D40%7Cag%3D101%7Ccdn_url%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%7Csurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%7Csmurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%252Fassets%252Fstyle-manager&message=&providerVersion=V2&evt=captchaInitiated&ctx=Signup&url=https%3A%2F%2Fwww.roblox.com%2F&lt=2025-06-25T14%3A55%3A02.597Z&gid=-1036450621
+[2025-06-25T14:55:02.645Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/main.dd291841a4abd1b7f8e5.js
+[2025-06-25T14:55:02.668Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gfct/
+[2025-06-25T14:55:02.692Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/lib.chunk.c06d0f6f0277344853b7.js
+[2025-06-25T14:55:02.695Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/320.vendors.cca9b16e97778e82aac7.js
+[2025-06-25T14:55:02.697Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/378.chunk.349d16c9bdd4ced95453.js
+[2025-06-25T14:55:02.698Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/542.vendors.abe0e64e95582406fe38.js
+[2025-06-25T14:55:02.700Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/924.vendors.ea33e7ebaefd19354536.js
+[2025-06-25T14:55:02.701Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/571.chunk.6c3590476902f9ef2cdf.js
+[2025-06-25T14:55:02.889Z] Worker 0: CAPTCHA detected via DOM scan: Found CAPTCHA keyword: captcha
+[2025-06-25T14:55:02.890Z] Worker 0: Checking for CAPTCHA for ElentinalPobxfy69
+[2025-06-25T14:55:02.895Z] Found 3 CAPTCHA-related network resources
+[2025-06-25T14:55:02.895Z] Worker 0: CAPTCHA detected for ElentinalPobxfy69
+[2025-06-25T14:55:02.910Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T14:55:02.913Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/style-manager/styles/ed325c08-10a9-44ca-be7b-a6983517d479.css
+[2025-06-25T14:55:02.937Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T14:55:02.983Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/remoteEntry.js
+[2025-06-25T14:55:03.340Z] Saved pre-CAPTCHA screenshot to logs\before_captcha_ElentinalPobxfy69_1750863302896.png
+[2025-06-25T14:55:03.340Z] Waiting for CAPTCHA iframe to fully load...
+[2025-06-25T14:55:06.350Z] Worker 0: Attempting to solve CAPTCHA automatically for ElentinalPobxfy69
+[2025-06-25T14:55:06.352Z] CAPTCHA preparation result: Prepared CAPTCHA elements
+[2025-06-25T14:55:08.364Z] CAPTCHA solving attempt 1/3
+[2025-06-25T14:55:08.365Z] Attempting to solve CAPTCHA automatically with 2captcha API
+[2025-06-25T14:55:08.367Z] Found CAPTCHA service URL: https://ecsv2.roblox.com
+[2025-06-25T14:55:08.367Z] Updated subdomain to: ecsv2.roblox.com
+[2025-06-25T14:55:08.368Z] Attempting to extract Roblox FunCaptcha data
+[2025-06-25T14:55:08.370Z] Using default CAPTCHA configuration
+[2025-06-25T14:55:08.370Z] Found CAPTCHA key from page DOM: A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F
+[2025-06-25T14:55:08.370Z] Using CAPTCHA subdomain: ecsv2.roblox.com
+[2025-06-25T14:55:08.371Z] Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+[2025-06-25T14:55:08.372Z] Trying CAPTCHA service: 2captcha
+[2025-06-25T14:55:08.372Z] Using direct 2captcha API for FunCaptcha
+[2025-06-25T14:55:08.372Z] Sending FunCaptcha request to 2captcha: key=47bc4a36c08d5a78aa7809cd888a46ab&method=funcaptcha&publickey=A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F&surl=https%3A%2F%2Fclient-api.arkoselabs.com&pageurl=https%3A%2F%2Fwww.roblox.com%2F&json=1
+[2025-06-25T14:55:09.127Z] 2captcha submission response: {"status":1,"request":"79958914127"}
+[2025-06-25T14:55:09.129Z] CAPTCHA submitted successfully, got ID: 79958914127
+[2025-06-25T14:55:09.129Z] Waiting 10 seconds before checking for results...
+[2025-06-25T14:55:19.135Z] Checking CAPTCHA solution status (attempt 1/40)...
+[2025-06-25T14:55:19.514Z] 2captcha result response: {"status":0,"request":"ERROR_CAPTCHA_UNSOLVABLE","error_text":"Workers could not solve the Captcha"}
+[2025-06-25T14:55:19.516Z] Falling back to standard 2captcha method
+[2025-06-25T14:55:19.516Z] Starting 2captcha FunCaptcha solving process
+[2025-06-25T14:55:19.516Z] 2captcha request params: key=47bc4a36c08d5a78aa7809cd888a46ab&method=funcaptcha&publickey=A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F&surl=https%3A%2F%2Fecsv2.roblox.com&pageurl=https%3A%2F%2Fwww.roblox.com%2F&userAgent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F93.0.4577.63+Safari%2F537.36
+[2025-06-25T14:55:19.517Z] Sending request to 2captcha...
+[2025-06-25T14:55:19.851Z] 2captcha raw response: OK|79958915578
+[2025-06-25T14:55:19.852Z] 2captcha task created successfully with ID: 79958915578
+[2025-06-25T14:55:19.852Z] Waiting for 2captcha to solve the CAPTCHA...
+[2025-06-25T14:55:19.852Z] Checking CAPTCHA solution status (attempt 1/40)...
+[2025-06-25T14:55:25.555Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T14:55:25.555Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:55:25.555Z] Checking CAPTCHA solution status (attempt 2/40)...
+[2025-06-25T14:55:32.016Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T14:55:32.017Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:55:32.018Z] Checking CAPTCHA solution status (attempt 3/40)...
+[2025-06-25T14:55:39.871Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T14:55:39.871Z] CAPTCHA still being solved, waiting...
+[2025-06-25T14:55:39.871Z] Checking CAPTCHA solution status (attempt 4/40)...
+[2025-06-25T14:59:06.275Z] Loaded 6 proxies
+[2025-06-25T14:59:06.278Z] ==================================
+[2025-06-25T14:59:06.279Z] ROBLOX ACCOUNT CREATOR - ENHANCED
+[2025-06-25T14:59:06.279Z] ==================================
+[2025-06-25T14:59:06.279Z] Configuration: {
+  "baseName": "ElentinalPo",
+  "randomizeName": true,
+  "urutName": false,
+  "startIndex": 1,
+  "endIndex": 10,
+  "password": "PasswordKuat123",
+  "birthMonth": "Mar",
+  "birthDay": "15",
+  "birthYear": "2005",
+  "outputFile": "hasil_akun.txt",
+  "captchaSolve": true,
+  "captchaApiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+  "siteKey": "A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F",
+  "pageUrl": "https://www.roblox.com/",
+  "threads": 1,
+  "retryAttempts": 3,
+  "delayBetweenAccounts": 5000,
+  "useProxies": false,
+  "randomUserAgents": true,
+  "enableLogging": true,
+  "verboseLog": true,
+  "headless": false,
+  "useChrome": false,
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "useExtensions": false,
+  "extensionsPath": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions",
+  "useProfileDir": true,
+  "captchaService": "2captcha",
+  "captchaServices": {
+    "2captcha": {
+      "apiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+      "enabled": true
+    },
+    "anticaptcha": {
+      "apiKey": "",
+      "enabled": false
+    },
+    "capmonster": {
+      "apiKey": "",
+      "enabled": false
+    }
+  },
+  "captchaMaxAttempts": 40,
+  "captchaTimeout": 120000,
+  "captchaRetryDelay": 5000,
+  "funcaptchaOptions": {
+    "subdomain": "roblox-api.arkoselabs.com",
+    "surl": "https://roblox-api.arkoselabs.com",
+    "data": {
+      "blob": ""
+    }
+  }
+}
+[2025-06-25T14:59:06.285Z] Worker 0: Launching browser with full options
+[2025-06-25T14:59:19.288Z] Worker 0: Creating account ElentinalPolgbb748
+[2025-06-25T14:59:23.170Z] Saved pre-signup screenshot to logs\before_signup_ElentinalPolgbb748_1750863562823.png
+[2025-06-25T14:59:23.218Z] Worker 0: Clicked signup for ElentinalPolgbb748
+[2025-06-25T14:59:24.096Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/api.js
+[2025-06-25T14:59:24.386Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/settings
+[2025-06-25T14:59:24.528Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/metrics/ui
+[2025-06-25T14:59:24.540Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gt2/public_key/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F
+[2025-06-25T14:59:24.664Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.html#A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&df9d0132-6b8b-4ee6-8ac8-2cdc94e977de
+[2025-06-25T14:59:24.704Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.js
+[2025-06-25T14:59:24.761Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/ec-game-core/bootstrap/1.27.8/standard/game_core_bootstrap.js
+[2025-06-25T14:59:24.819Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/init-load/?session_token=570184c512281c119.8211129404
+[2025-06-25T14:59:24.822Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/index.html?session=570184c512281c119.8211129404&r=ap-southeast-1&meta=3&metabgclr=transparent&metaiconclr=%23757575&maintxtclr=%23b8b8b8&guitextcolor=%23474747&pk=A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&at=40&ag=101&cdn_url=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc&surl=https%3A%2F%2Farkoselabs.roblox.com&smurl=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc%2Fassets%2Fstyle-manager&theme=default
+[2025-06-25T14:59:24.825Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/metrics/ui
+[2025-06-25T14:59:24.828Z] CAPTCHA resource detected: https://ecsv2.roblox.com/www/e.png?type=visible&provider=FunCaptcha&ucid=4a94353e-61c8-45fd-8a45-a7cbf0c11acb&session=570184c512281c119.8211129404%7Cr%3Dap-southeast-1%7Cmeta%3D3%7Cmetabgclr%3Dtransparent%7Cmetaiconclr%3D%2523757575%7Cmaintxtclr%3D%2523b8b8b8%7Cguitextcolor%3D%2523474747%7Cpk%3DA2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F%7Cat%3D40%7Cag%3D101%7Ccdn_url%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%7Csurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%7Csmurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%252Fassets%252Fstyle-manager&message=&providerVersion=V2&evt=captchaInitiated&ctx=Signup&url=https%3A%2F%2Fwww.roblox.com%2F&lt=2025-06-25T14%3A59%3A24.825Z&gid=-1095293028
+[2025-06-25T14:59:24.863Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/main.dd291841a4abd1b7f8e5.js
+[2025-06-25T14:59:24.875Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gfct/
+[2025-06-25T14:59:24.899Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/lib.chunk.c06d0f6f0277344853b7.js
+[2025-06-25T14:59:24.900Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/320.vendors.cca9b16e97778e82aac7.js
+[2025-06-25T14:59:24.901Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/378.chunk.349d16c9bdd4ced95453.js
+[2025-06-25T14:59:24.902Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/542.vendors.abe0e64e95582406fe38.js
+[2025-06-25T14:59:24.903Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/924.vendors.ea33e7ebaefd19354536.js
+[2025-06-25T14:59:24.904Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/571.chunk.6c3590476902f9ef2cdf.js
+[2025-06-25T14:59:25.099Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T14:59:25.100Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/style-manager/styles/ed325c08-10a9-44ca-be7b-a6983517d479.css
+[2025-06-25T14:59:25.124Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T14:59:25.135Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/remoteEntry.js
+[2025-06-25T14:59:25.231Z] Worker 0: CAPTCHA detected via DOM scan: Found CAPTCHA keyword: captcha
+[2025-06-25T14:59:25.232Z] Worker 0: Checking for CAPTCHA for ElentinalPolgbb748
+[2025-06-25T14:59:25.235Z] Found 4 CAPTCHA-related network resources
+[2025-06-25T14:59:25.236Z] Worker 0: CAPTCHA detected for ElentinalPolgbb748
+[2025-06-25T14:59:25.609Z] Saved pre-CAPTCHA screenshot to logs\before_captcha_ElentinalPolgbb748_1750863565236.png
+[2025-06-25T14:59:25.609Z] Waiting for CAPTCHA iframe to fully load...
+[2025-06-25T14:59:28.619Z] Worker 0: Attempting to solve CAPTCHA automatically for ElentinalPolgbb748
+[2025-06-25T14:59:28.622Z] CAPTCHA preparation result: Prepared CAPTCHA elements
+[2025-06-25T14:59:30.634Z] CAPTCHA solving attempt 1/3
+[2025-06-25T14:59:30.636Z] Attempting to solve CAPTCHA automatically with 2captcha API
+[2025-06-25T14:59:30.638Z] Found CAPTCHA service URL: https://ecsv2.roblox.com
+[2025-06-25T14:59:30.639Z] Updated subdomain to: ecsv2.roblox.com
+[2025-06-25T14:59:30.641Z] Attempting to extract Roblox FunCaptcha data
+[2025-06-25T14:59:30.644Z] Using default CAPTCHA configuration
+[2025-06-25T14:59:30.645Z] Found CAPTCHA key from page DOM: A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F
+[2025-06-25T14:59:30.646Z] Using CAPTCHA subdomain: ecsv2.roblox.com
+[2025-06-25T14:59:30.647Z] Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+[2025-06-25T14:59:30.648Z] Trying CAPTCHA service: 2captcha
+[2025-06-25T14:59:30.648Z] Using direct 2captcha API for FunCaptcha
+[2025-06-25T14:59:30.649Z] Sending FunCaptcha request to 2captcha: key=47bc4a36c08d5a78aa7809cd888a46ab&method=funcaptcha&publickey=A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F&surl=https%3A%2F%2Froblox-api.arkoselabs.com&pageurl=https%3A%2F%2Fwww.roblox.com%2F&json=1&userAgent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F94.0.4606.81+Safari%2F537.36
+[2025-06-25T14:59:30.976Z] 2captcha submission response: {"status":1,"request":"79958946911"}
+[2025-06-25T14:59:30.977Z] CAPTCHA submitted successfully, got ID: 79958946911
+[2025-06-25T14:59:30.977Z] Waiting 20 seconds before checking for results...
+[2025-06-25T14:59:50.984Z] Checking CAPTCHA solution status (attempt 1/40)...
+[2025-06-25T14:59:51.510Z] 2captcha result response: {"status":0,"request":"ERROR_CAPTCHA_UNSOLVABLE","error_text":"Workers could not solve the Captcha"}
+[2025-06-25T14:59:51.511Z] Falling back to standard 2captcha method
+[2025-06-25T14:59:51.512Z] Starting 2captcha FunCaptcha solving process
+[2025-06-25T14:59:51.512Z] 2captcha request params: key=47bc4a36c08d5a78aa7809cd888a46ab&method=funcaptcha&publickey=A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F&surl=https%3A%2F%2Froblox-api.arkoselabs.com&pageurl=https%3A%2F%2Fwww.roblox.com%2F&userAgent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F94.0.4606.81+Safari%2F537.36&json=1
+[2025-06-25T14:59:51.512Z] Sending request to 2captcha...
+[2025-06-25T14:59:51.749Z] 2captcha raw response: {"status":1,"request":"79958949636"}
+[2025-06-25T14:59:51.750Z] 2captcha task created successfully with ID: 79958949636
+[2025-06-25T14:59:51.750Z] Waiting for 2captcha to solve the CAPTCHA...
+[2025-06-25T14:59:51.750Z] Waiting 20 seconds before checking for results...
+[2025-06-25T15:00:11.765Z] Checking CAPTCHA solution status (attempt 1/40)...
+[2025-06-25T15:00:17.174Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:00:17.174Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:00:17.175Z] Checking CAPTCHA solution status (attempt 2/40)...
+[2025-06-25T15:00:23.732Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:00:23.733Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:00:23.733Z] Checking CAPTCHA solution status (attempt 3/40)...
+[2025-06-25T15:00:31.636Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:00:31.636Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:00:31.637Z] Checking CAPTCHA solution status (attempt 4/40)...
+[2025-06-25T15:00:40.631Z] 2captcha result response: {"status":0,"request":"ERROR_CAPTCHA_UNSOLVABLE","error_text":"Workers could not solve the Captcha"}
+[2025-06-25T15:00:40.632Z] Checking CAPTCHA solution status (attempt 5/40)...
+[2025-06-25T15:03:34.780Z] Loaded 6 proxies
+[2025-06-25T15:03:34.783Z] ==================================
+[2025-06-25T15:03:34.784Z] ROBLOX ACCOUNT CREATOR - ENHANCED
+[2025-06-25T15:03:34.784Z] ==================================
+[2025-06-25T15:03:34.784Z] Configuration: {
+  "baseName": "ElentinalPo",
+  "randomizeName": true,
+  "urutName": false,
+  "startIndex": 1,
+  "endIndex": 10,
+  "password": "PasswordKuat123",
+  "birthMonth": "Mar",
+  "birthDay": "15",
+  "birthYear": "2005",
+  "outputFile": "hasil_akun.txt",
+  "captchaSolve": true,
+  "captchaApiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+  "siteKey": "A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F",
+  "pageUrl": "https://www.roblox.com/",
+  "threads": 1,
+  "retryAttempts": 3,
+  "delayBetweenAccounts": 5000,
+  "useProxies": false,
+  "randomUserAgents": true,
+  "enableLogging": true,
+  "verboseLog": true,
+  "headless": false,
+  "useChrome": false,
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "useExtensions": false,
+  "extensionsPath": "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions",
+  "useProfileDir": true,
+  "captchaService": "2captcha",
+  "captchaServices": {
+    "2captcha": {
+      "apiKey": "47bc4a36c08d5a78aa7809cd888a46ab",
+      "enabled": true
+    },
+    "anticaptcha": {
+      "apiKey": "",
+      "enabled": false
+    },
+    "capmonster": {
+      "apiKey": "",
+      "enabled": false
+    }
+  },
+  "captchaMaxAttempts": 40,
+  "captchaTimeout": 120000,
+  "captchaRetryDelay": 5000,
+  "funcaptchaOptions": {
+    "subdomain": "roblox-api.arkoselabs.com",
+    "surl": "https://roblox-api.arkoselabs.com",
+    "data": {
+      "blob": ""
+    }
+  }
+}
+[2025-06-25T15:03:34.790Z] Worker 0: Launching browser with full options
+[2025-06-25T15:03:45.626Z] Worker 0: Creating account ElentinalPobyle807
+[2025-06-25T15:03:49.303Z] Saved pre-signup screenshot to logs\before_signup_ElentinalPobyle807_1750863828851.png
+[2025-06-25T15:03:49.469Z] Worker 0: Clicked signup for ElentinalPobyle807
+[2025-06-25T15:03:50.853Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/api.js
+[2025-06-25T15:03:51.300Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F/settings
+[2025-06-25T15:03:51.450Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gt2/public_key/A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F
+[2025-06-25T15:03:51.473Z] Worker 0: CAPTCHA detected via DOM scan: Found CAPTCHA keyword: captcha
+[2025-06-25T15:03:51.474Z] Worker 0: Checking for CAPTCHA for ElentinalPobyle807
+[2025-06-25T15:03:51.476Z] Found 3 CAPTCHA-related network resources
+[2025-06-25T15:03:51.476Z] Worker 0: CAPTCHA detected for ElentinalPobyle807
+[2025-06-25T15:03:51.800Z] Saved pre-CAPTCHA screenshot to logs\before_captcha_ElentinalPobyle807_1750863831476.png
+[2025-06-25T15:03:51.800Z] Waiting for CAPTCHA iframe to fully load...
+[2025-06-25T15:03:51.802Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.html#A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&7435c365-773c-4d7a-a1a6-733b38d295f1
+[2025-06-25T15:03:51.832Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/v2/3.5.0/enforcement.df45d93b7883fed1e47dedac58c1d924.js
+[2025-06-25T15:03:51.877Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/ec-game-core/bootstrap/1.27.8/standard/game_core_bootstrap.js
+[2025-06-25T15:03:51.928Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/init-load/?session_token=892184c516055f9e3.4367816404
+[2025-06-25T15:03:51.931Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/index.html?session=892184c516055f9e3.4367816404&r=ap-southeast-1&meta=3&metabgclr=transparent&metaiconclr=%23757575&maintxtclr=%23b8b8b8&guitextcolor=%23474747&pk=A2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F&at=40&ag=101&cdn_url=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc&surl=https%3A%2F%2Farkoselabs.roblox.com&smurl=https%3A%2F%2Farkoselabs.roblox.com%2Fcdn%2Ffc%2Fassets%2Fstyle-manager&theme=default
+[2025-06-25T15:03:51.933Z] CAPTCHA resource detected: https://ecsv2.roblox.com/www/e.png?type=visible&provider=FunCaptcha&ucid=29a6f2c8-55d8-4019-99b6-295528f6f813&session=892184c516055f9e3.4367816404%7Cr%3Dap-southeast-1%7Cmeta%3D3%7Cmetabgclr%3Dtransparent%7Cmetaiconclr%3D%2523757575%7Cmaintxtclr%3D%2523b8b8b8%7Cguitextcolor%3D%2523474747%7Cpk%3DA2A14B1D-1AF3-C791-9BBC-EE33CC7A0A6F%7Cat%3D40%7Cag%3D101%7Ccdn_url%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%7Csurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%7Csmurl%3Dhttps%253A%252F%252Farkoselabs.roblox.com%252Fcdn%252Ffc%252Fassets%252Fstyle-manager&message=&providerVersion=V2&evt=captchaInitiated&ctx=Signup&url=https%3A%2F%2Fwww.roblox.com%2F&lt=2025-06-25T15%3A03%3A51.932Z&gid=-740338193
+[2025-06-25T15:03:51.966Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/main.dd291841a4abd1b7f8e5.js
+[2025-06-25T15:03:51.985Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/gfct/
+[2025-06-25T15:03:51.995Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/lib.chunk.c06d0f6f0277344853b7.js
+[2025-06-25T15:03:51.997Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/320.vendors.cca9b16e97778e82aac7.js
+[2025-06-25T15:03:51.998Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/378.chunk.349d16c9bdd4ced95453.js
+[2025-06-25T15:03:51.999Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/542.vendors.abe0e64e95582406fe38.js
+[2025-06-25T15:03:52.001Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/924.vendors.ea33e7ebaefd19354536.js
+[2025-06-25T15:03:52.002Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/game-core/1.27.8/standard/571.chunk.6c3590476902f9ef2cdf.js
+[2025-06-25T15:03:52.211Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T15:03:52.212Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/cdn/fc/assets/style-manager/styles/ed325c08-10a9-44ca-be7b-a6983517d479.css
+[2025-06-25T15:03:52.231Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T15:03:52.245Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/remoteEntry.js
+[2025-06-25T15:03:54.801Z] Worker 0: Attempting to solve CAPTCHA automatically for ElentinalPobyle807
+[2025-06-25T15:03:54.806Z] CAPTCHA preparation result: Prepared CAPTCHA elements
+[2025-06-25T15:03:56.815Z] CAPTCHA solving attempt 1/3
+[2025-06-25T15:03:56.816Z] Attempting to solve CAPTCHA automatically with 2captcha API
+[2025-06-25T15:03:56.819Z] Found CAPTCHA service URL: https://ecsv2.roblox.com
+[2025-06-25T15:03:56.820Z] Updated subdomain to: ecsv2.roblox.com
+[2025-06-25T15:03:56.821Z] Attempting to extract Roblox FunCaptcha data
+[2025-06-25T15:03:56.824Z] Using default CAPTCHA configuration
+[2025-06-25T15:03:56.824Z] Found CAPTCHA key from page DOM: A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F
+[2025-06-25T15:03:56.825Z] Using CAPTCHA subdomain: ecsv2.roblox.com
+[2025-06-25T15:03:56.826Z] Using User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15
+[2025-06-25T15:03:56.827Z] Trying CAPTCHA service: 2captcha
+[2025-06-25T15:03:56.827Z] Starting Roblox FunCaptcha solution with 2captcha
+[2025-06-25T15:03:56.828Z] Sending Roblox FunCaptcha request to 2captcha: key=47bc4a36c08d5a78aa7809cd888a46ab&method=funcaptcha&publickey=A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F&surl=https%3A%2F%2Froblox-api.arkoselabs.com&pageurl=https%3A%2F%2Fwww.roblox.com%2F&json=1
+[2025-06-25T15:03:57.193Z] 2captcha submission response: {"status":1,"request":"79958997115"}
+[2025-06-25T15:03:57.193Z] CAPTCHA submitted successfully, got ID: 79958997115
+[2025-06-25T15:03:57.194Z] Waiting 20 seconds before checking for results...
+[2025-06-25T15:04:17.196Z] Checking CAPTCHA solution status (attempt 1/30)...
+[2025-06-25T15:04:17.663Z] 2captcha result response: {"status":0,"request":"ERROR_CAPTCHA_UNSOLVABLE","error_text":"Workers could not solve the Captcha"}
+[2025-06-25T15:04:17.664Z] Falling back to direct 2captcha method
+[2025-06-25T15:04:17.665Z] Using direct 2captcha API for FunCaptcha
+[2025-06-25T15:04:17.665Z] Sending FunCaptcha request to 2captcha: key=47bc4a36c08d5a78aa7809cd888a46ab&method=funcaptcha&publickey=A2A14B1D-1AF3-C791-9BBC-EE33C7C70A6F&surl=https%3A%2F%2Froblox-api.arkoselabs.com&pageurl=https%3A%2F%2Fwww.roblox.com%2F&json=1&userAgent=Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_15_7%29+AppleWebKit%2F605.1.15+%28KHTML%2C+like+Gecko%29+Version%2F15.0+Safari%2F605.1.15
+[2025-06-25T15:04:17.927Z] 2captcha submission response: {"status":1,"request":"79958999999"}
+[2025-06-25T15:04:17.927Z] CAPTCHA submitted successfully, got ID: 79958999999
+[2025-06-25T15:04:17.928Z] Waiting 20 seconds before checking for results...
+[2025-06-25T15:04:37.932Z] Checking CAPTCHA solution status (attempt 1/40)...
+[2025-06-25T15:04:38.378Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:04:38.379Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:04:43.387Z] Checking CAPTCHA solution status (attempt 2/40)...
+[2025-06-25T15:04:43.885Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:04:43.887Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:04:45.874Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/a/
+[2025-06-25T15:04:45.882Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/301.vendors.8c51fa5660365a7e3cdc.js
+[2025-06-25T15:04:45.884Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/549.chunk.4c8b5d949691748e8ce4.js
+[2025-06-25T15:04:45.886Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/fc/assets/ec-game-core/match-game/1.27.8/standard/264.chunk.deed2ff73a1973b168c8.js
+[2025-06-25T15:04:45.957Z] CAPTCHA resource detected: https://arkoselabs.roblox.com/rtig/image?challenge=0&expires=1750867432&gameToken=319184c516161c037.7925154304&sessionToken=892184c516055f9e3.4367816404&signature=ARsQfdcJohcV6mgcsYJaABwHbztpjrf632A4I8QT2w050Pho1Jh1xys3R1%2BzhhhX%2FhrDCMbCR%2BIgmNGk44akC6YlHKGqivxHGUGUktbOq5GGaf8%2FswDEgcVRMjHVuZzM2266Vl82nAMBYUoHJsWrVBaEXPij4Ltdvb2hPWGz63rZJOTEjMGb6q2zXYprvBIiFS1qhOMwzRa8VSzR2KNYN3H8BE5yiRaLhVq055Xw06U7Msrgt2ScptUIzmnuzu62aB14PYFHzEH7%2BemVtJmkpkDpSMRU9P34mFi7DXNmH9HABePIeuAqHc4IIawBwED8T7mKdxG%2FcGo80GGpQS4rAA%3D%3D
+[2025-06-25T15:04:48.887Z] Checking CAPTCHA solution status (attempt 3/40)...
+[2025-06-25T15:04:49.149Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:04:49.149Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:04:54.157Z] Checking CAPTCHA solution status (attempt 4/40)...
+[2025-06-25T15:04:54.415Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:04:54.415Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:04:59.427Z] Checking CAPTCHA solution status (attempt 5/40)...
+[2025-06-25T15:04:59.696Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:04:59.697Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:05:04.698Z] Checking CAPTCHA solution status (attempt 6/40)...
+[2025-06-25T15:05:04.966Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:05:04.966Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:05:09.967Z] Checking CAPTCHA solution status (attempt 7/40)...
+[2025-06-25T15:05:10.225Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:05:10.225Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:05:15.237Z] Checking CAPTCHA solution status (attempt 8/40)...
+[2025-06-25T15:05:15.713Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:05:15.713Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:05:20.725Z] Checking CAPTCHA solution status (attempt 9/40)...
+[2025-06-25T15:05:21.174Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:05:21.175Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:05:26.182Z] Checking CAPTCHA solution status (attempt 10/40)...
+[2025-06-25T15:05:26.645Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:05:26.646Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:05:31.652Z] Checking CAPTCHA solution status (attempt 11/40)...
+[2025-06-25T15:05:32.180Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:05:32.180Z] CAPTCHA still being solved, waiting...
+[2025-06-25T15:05:37.186Z] Checking CAPTCHA solution status (attempt 12/40)...
+[2025-06-25T15:05:37.647Z] 2captcha result response: {"status":0,"request":"CAPCHA_NOT_READY"}
+[2025-06-25T15:05:37.647Z] CAPTCHA still being solved, waiting...

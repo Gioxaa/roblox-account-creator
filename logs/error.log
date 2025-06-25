@@ -1,0 +1,91 @@
+[2025-06-25T14:42:47.548Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:42:48.477Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:42:49.111Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:42:50.677Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:42:50.836Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T14:42:52.398Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:42:52.415Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T14:42:55.390Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:44:48.189Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:44:53.697Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:44:59.021Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:04.575Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:10.102Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:15.612Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:20.927Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:26.482Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:31.970Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:37.307Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:42.821Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:48.382Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:53.899Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:45:59.256Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:04.614Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:10.178Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:15.546Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:21.092Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:26.692Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:32.269Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:37.673Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:46:37.673Z] ERROR: 2captcha solving failed: Failed to get CAPTCHA solution after maximum attempts
+[2025-06-25T14:46:37.674Z] ERROR: All CAPTCHA solving services failed
+[2025-06-25T14:48:22.764Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:48:28.262Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:48:33.787Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:48:39.129Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:48:44.457Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:48:49.738Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:48:55.217Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:00.510Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:05.824Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:11.485Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:17.039Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:22.358Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:27.880Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:33.671Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:39.169Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:44.506Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:49.845Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:49:55.383Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:50:00.909Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:50:06.442Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:50:11.793Z] ERROR: Error polling for 2captcha result: 2captcha reports CAPTCHA as unsolvable
+[2025-06-25T14:50:11.793Z] ERROR: 2captcha solving failed: Failed to get CAPTCHA solution after maximum attempts
+[2025-06-25T14:50:11.793Z] ERROR: All CAPTCHA solving services failed
+[2025-06-25T14:50:11.794Z] ERROR: Error extracting CAPTCHA details from network: Attempted to use detached Frame '3C205DC00A574BD67A19A98F660C610B'.
+[2025-06-25T14:50:11.795Z] ERROR: Error extracting Roblox CAPTCHA data: Attempted to use detached Frame '3C205DC00A574BD67A19A98F660C610B'.
+[2025-06-25T14:50:11.796Z] ERROR: CAPTCHA solving error: Attempted to use detached Frame '3C205DC00A574BD67A19A98F660C610B'.
+[2025-06-25T14:50:11.797Z] ERROR: Failed to save manual CAPTCHA screenshot: Protocol error (Page.captureScreenshot): Session closed. Most likely the page has been closed.
+[2025-06-25T14:50:20.306Z] ERROR: Worker 0: Failed to create account ElentinalPoqcim572: Attempted to use detached Frame '3C205DC00A574BD67A19A98F660C610B'.
+[2025-06-25T14:50:20.306Z] ERROR: Failed to save error screenshot: Protocol error (Page.captureScreenshot): Session closed. Most likely the page has been closed.
+[2025-06-25T14:54:53.915Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:54:54.887Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:54:55.647Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:54:57.304Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:54:57.450Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T14:54:58.791Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:54:58.809Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T14:55:00.829Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:55:19.515Z] ERROR: Direct 2captcha API error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T14:55:19.516Z] ERROR: Direct 2captcha method failed: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T14:59:15.895Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:59:16.625Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:59:17.615Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:59:19.292Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:59:19.329Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T14:59:20.391Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:59:20.408Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T14:59:23.175Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T14:59:51.510Z] ERROR: Direct 2captcha API error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T14:59:51.511Z] ERROR: Direct 2captcha method failed: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T15:00:40.631Z] ERROR: Error polling for 2captcha result: 2captcha API error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T15:03:42.439Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T15:03:43.024Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T15:03:43.754Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T15:03:45.628Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T15:03:45.661Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T15:03:46.822Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T15:03:46.842Z] ERROR: Error typing human-like: page.waitForTimeout is not a function
+[2025-06-25T15:03:49.351Z] ERROR: Error simulating human mouse movement: Failed to construct 'MouseEvent': Failed to read the 'clientX' property from 'MouseEventInit': The provided double value is non-finite.
+[2025-06-25T15:04:17.663Z] ERROR: Roblox FunCaptcha solution error: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
+[2025-06-25T15:04:17.664Z] ERROR: Direct Roblox FunCaptcha method failed: 2captcha error: ERROR_CAPTCHA_UNSOLVABLE
